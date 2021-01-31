@@ -1,2 +1,2 @@
 # Project-Michigan-Compare-Harvesting-2021
-A project that compares three assumptions about harvesting behavior using SOSIEL harvest on a Michigan landscape.
+A project that uses the SOSIEL Harvest Extension (SHE) to compare three alternative approaches to modeling forest management on a Michigan landscape.
