@@ -1,0 +1,2870 @@
+LandisData "Biomass Harvest"
+Timestep 5
+>>MA MAP WITH ALL PNIF ACTIVE: "man_area_8_10dd.img"
+>> MA MAP WITH RANDOM PNIF IN RESERVE: "man_area_split_pnif5.IMG"
+
+ManagementAreas "Y:/mn_mi_output/PSU_J/Landis_MI_inputs/rasters/man_area_split_pnif5.img"
+Stands "Y:/mn_mi_output/PSU_J/Landis_MI_inputs/rasters/stand_8_13_alg1.img"
+
+Prescription	Aspen_Clearcut_no_plant<<2
+		StandRanking	Economic
+		>>Species	EconomicRank	MinimumAge
+		>>-------	-----------	----------
+		poputrem	100	35
+		popugran	100	35
+		popubals	100	35
+		MinimumAge	35
+				ForestTypeTable << aspen
+				>> InclusionRule ageRange percentCells species
+				Optional 35-90 45 poputrem
+				Optional 35-90 45 popugran
+				Optional 35-100 45 popubals
+				SiteSelection Complete
+			CohortsRemoved ClearCut
+
+Prescription	Aspen_Clearcut_plant<<3
+		StandRanking	Economic
+		>>Species	EconomicRank	MinimumAge
+		>>-------	-----------	----------
+		poputrem	100	35
+		popugran	100	35
+		popubals	100	35
+		MinimumAge	35
+				ForestTypeTable << aspen
+				>> InclusionRule ageRange percentCells species
+				Optional 35-90 45 poputrem
+				Optional 35-90 45 popugran
+				Optional 35-100 45 popubals
+				SiteSelection Complete
+			CohortsRemoved ClearCut
+			Plant pinuresi pinubank
+			
+			
+Prescription Paperbirch_Clearcut<<4
+		StandRanking	Economic
+		>>Species	EconomicRank	MinimumAge
+		>>-------	-----------	----------
+		betupapy	100	35
+		MinimumAge	35
+				ForestTypeTable << aspen
+				>> InclusionRule ageRange percentCells species
+				Required 35-100 highest betupapy
+				SiteSelection Complete
+			CohortsRemoved ClearCut
+				
+Prescription Paperbirch_Seedtree<<5
+				StandRanking	Economic
+				>>Species	EconomicRank	MinimumAge
+				>>-------	-----------	----------
+				betupapy	100	35
+		MinimumAge	35
+				ForestTypeTable << aspen
+				>> InclusionRule ageRange percentCells species
+				Required 35-100 highest betupapy
+				SiteSelection Complete
+			CohortsRemoved SpeciesList
+		>>Species 	Selection
+		>>-------	--------
+		abiebals	All
+		acerrubr 	All
+		acersacc	All
+		betualle 	30-300(80%)
+		betupapy	30-110(80%) 
+		carycord	All
+		caryovat	All
+		castdent	All
+		fagugran	All	
+		fraxamer	All
+		fraxnigr	All
+		fraxpenn	All
+		piceglau 	All
+		picemari 	All
+		pinubank	All
+		pinuresi	All
+		pinustro	All
+		pinusylv	All
+		popubals	All
+		popugran	All 
+		poputrem	All
+		prunsero	All
+		queralba	All
+		quercocc	All
+		querelli	All	
+		quermacr 	All
+		querrubr 	All
+		quervelu	All
+		thujocci	All
+		tiliamer 	All
+		ulmuamer	All
+		tsugcana	800
+	
+Prescription Paperbirch_Shelterwood<<6
+				StandRanking	Economic
+				>>Species	EconomicRank	MinimumAge
+				>>-------	-----------	----------
+				betupapy	100	35
+		MinimumAge	35
+				ForestTypeTable << aspen
+				>> InclusionRule ageRange percentCells species
+				Required 35-100 highest betupapy
+				SiteSelection Complete
+			CohortsRemoved SpeciesList
+		>>Species 	Selection
+		>>-------	--------
+		abiebals	All
+		acerrubr 	All
+		acersacc	50-250(70%)
+		betualle 	150-300(70%)
+		betupapy	35-110(70%) 
+		carycord	200-300(70%)
+		caryovat	200-300(70%)
+		castdent	200-300(70%)
+		fagugran	200-350(70%)	
+		fraxamer	All
+		fraxnigr	All
+		fraxpenn	All
+		piceglau 	All
+		picemari 	All
+		pinubank	All
+		pinuresi	All
+		pinustro	All
+		pinusylv	All
+		popubals	All
+		popugran	All 
+		poputrem	All
+		prunsero	100-200(70%)
+		queralba	All
+		quercocc	All
+		querelli	All	
+		quermacr 	All
+		querrubr 	All
+		quervelu	All
+		thujocci	All
+		tiliamer 	150-250 (70%)
+		ulmuamer	All
+		tsugcana	800
+	>>tsugcana	All
+	SingleRepeat 10
+	CohortsRemoved	SpeciesList
+		acersacc	30-250
+		betualle 	30-300
+		betupapy	30-110 
+		carycord	30-300
+		caryovat	30-300
+		castdent	30-300
+		fagugran	30-350
+		prunsero	30-200
+		tiliamer 	30-250 
+		tsugcana	800
+
+Prescription Swamp_Hardwoods_Clear<<7
+	StandRanking  Economic
+		>>Species	EconomicRank	MinimumAge
+		>>------	------------	-----------
+		acerrubr 	100		55
+		betupapy	100		55
+		betualle	100		55
+		fraxpenn	100		55
+		fraxnigr	100		55
+		prunsero	100		55
+		ulmuamer	100		55
+	MinimumAge	55
+		ForestTypeTable << hardwoods
+		>> InclusionRule ageRange percentCells species
+		Optional 55-150 45 acerrubr
+		Optional 55-110 45 betupapy
+		Optional 55-300 45 betualle
+		Optional 55-150 45 fraxpenn
+		Optional 55-150 45 fraxnigr
+		Optional 55-200 45 prunsero
+		Optional 55-85 45 ulmuamer
+			SiteSelection Complete
+			CohortsRemoved	ClearCut
+
+Prescription Swamp_Hardwoods_Seedtree<<8
+	StandRanking  Economic
+		>>Species	EconomicRank	MinimumAge
+		>>------	------------	-----------
+		acerrubr 	100		55
+		betupapy	100		55
+		betualle	100		55
+		fraxpenn	100		55
+		fraxnigr	100		55
+		prunsero	100		55
+		ulmuamer	100		55
+	MinimumAge	55
+		ForestTypeTable << hardwoods
+		>> InclusionRule ageRange percentCells species
+		Optional 55-150 45 acerrubr
+		Optional 55-110 45 betupapy
+		Optional 55-300 45 betualle
+		Optional 55-150 45 fraxpenn
+		Optional 55-150 45 fraxnigr
+		Optional 55-200 45 prunsero
+		Optional 55-85 45 ulmuamer
+						SiteSelection Complete
+			CohortsRemoved SpeciesList
+		>>Species 	Selection
+		>>-------	--------
+		abiebals	All
+		acerrubr 	30-150(80%)
+		acersacc	All
+		betualle 	100-300(80%)
+		betupapy	80-110(80%) 
+		carycord	All
+		caryovat	All
+		castdent	All
+		fagugran	All	
+		fraxamer	All
+		fraxnigr	30-150(80%)
+		fraxpenn	30-150(80%)
+		piceglau 	All
+		picemari 	All
+		pinubank	All
+		pinuresi	All
+		pinustro	All
+		pinusylv	All
+		popubals	All
+		popugran	All 
+		poputrem	All
+		prunsero	30-200(80%)
+		queralba	All
+		quercocc	All
+		querelli	All	
+		quermacr 	All
+		querrubr 	All
+		quervelu	All
+		thujocci	All
+		tiliamer 	All
+		ulmuamer	30-85(80%)
+		tsugcana	800
+	
+Prescription Swamp_Hardwoods_Shelterwood<<9
+	StandRanking  Economic
+		>>Species	EconomicRank	MinimumAge
+		>>------	------------	-----------
+		acerrubr 	100		55
+		betupapy	100		55
+		betualle	100		55
+		fraxpenn	100		55
+		fraxnigr	100		55
+		prunsero	100		55
+		ulmuamer	100		55
+	MinimumAge	55
+		ForestTypeTable << hardwoods
+		>> InclusionRule ageRange percentCells species
+		Optional 55-150 45 acerrubr
+		Optional 55-110 45 betupapy
+		Optional 55-300 45 betualle
+		Optional 55-150 45 fraxpenn
+		Optional 55-150 45 fraxnigr
+		Optional 55-200 45 prunsero
+		Optional 55-85 45 ulmuamer
+						SiteSelection Complete
+			CohortsRemoved SpeciesList
+		>>Species 	Selection
+		>>-------	--------
+		abiebals	All
+		acerrubr 	100-150(60%)
+		acersacc	All
+		betualle 	100-300(60%)
+		betupapy	80-110(60%) 
+		carycord	All
+		caryovat	All
+		castdent	All
+		fagugran	All	
+		fraxamer	All
+		fraxnigr	100-150(60%)
+		fraxpenn	100-150(60%)
+		piceglau 	All
+		picemari 	All
+		pinubank	All
+		pinuresi	All
+		pinustro	All
+		pinusylv	All
+		popubals	All
+		popugran	All 
+		poputrem	All
+		prunsero	150-200(60%)
+		queralba	All
+		quercocc	All
+		querelli	All	
+		quermacr 	All
+		querrubr 	All
+		quervelu	All
+		thujocci	All
+		tiliamer 	All
+		ulmuamer	70-85(60%)
+		tsugcana	800
+	>>tsugcana	All
+	SingleRepeat 10
+	CohortsRemoved	SpeciesList
+		acerrubr	30-150
+		betupapy	30-110 
+		betualle	30-300
+		fraxnigr	30-150
+		fraxpenn	30-150
+		prunsero	30-200
+		ulmuamer	30-85
+		tsugcana	800
+		
+Prescription Swamp_Hardwoods_Thinning<<10
+	StandRanking  Economic
+		>>Species	EconomicRank	MinimumAge
+		>>------	------------	-----------
+		acerrubr 	100		55
+		betupapy	100		55
+		betualle	100		55
+		fraxpenn	100		55
+		fraxnigr	100		55
+		prunsero	100		55
+		ulmuamer	100		55
+	MinimumAge	55
+		ForestTypeTable << hardwoods
+		>> InclusionRule ageRange percentCells species
+		Optional 55-150 45 acerrubr
+		Optional 55-110 45 betupapy
+		Optional 55-300 45 betualle
+		Optional 55-150 45 fraxpenn
+		Optional 55-150 45 fraxnigr
+		Optional 55-200 45 prunsero
+		Optional 55-85 45 ulmuamer
+						SiteSelection Complete
+			CohortsRemoved SpeciesList
+		>>Species 	Selection	ASSUMES A THINNING FROM ABOVE (I.E. CUTTING THE OLDEST COHORTS)
+		>>-------	--------
+		abiebals	50-80(5%)
+		acerrubr 	100-150(10%)
+		acersacc	150-250(5%)
+		betualle 	200-300(10%)
+		betupapy	80-110(10%) 
+		carycord	200-300(5%)
+		caryovat	200-300(5%)
+		castdent	200-300(5%)
+		fagugran	250-350(5%)
+		fraxamer	150-200(5%)
+		fraxnigr	100-150(10%)
+		fraxpenn	100-150(10%)
+		piceglau 	80-120(5%)
+		picemari 	150-215(5%)
+		pinubank	100-120(5%)
+		pinuresi	200-250(5%)
+		pinustro	250-350(5%)
+		pinusylv	200-250(5%)
+		popubals	80-120(5%)
+		popugran	80-125(5%)
+		poputrem	70-100(5%)
+		prunsero	150-200(10%)
+		queralba	200-400(5%)
+		quercocc	80-150 (5%)
+		querelli	100-200(5%)
+		quermacr 	150-300(5%)
+		querrubr 	150-250(5%)
+		quervelu	100-200(5%)
+		thujocci	200-350(5%)
+		tiliamer 	100-250(5%)
+		ulmuamer	70-85(10%)
+		tsugcana	800
+
+Prescription Swamp_Hardwoods_Patch<<11
+	StandRanking  Economic
+		>>Species	EconomicRank	MinimumAge
+		>>------	------------	-----------
+		acerrubr 	100		55
+		betupapy	100		55
+		betualle	100		55
+		fraxpenn	100		55
+		fraxnigr	100		55
+		prunsero	100		55
+		ulmuamer	100		55
+	MinimumAge	55
+		ForestTypeTable << hardwoods
+		>> InclusionRule ageRange percentCells species
+		Optional 55-150 45 acerrubr
+		Optional 55-110 45 betupapy
+		Optional 55-300 45 betualle
+		Optional 55-150 45 fraxpenn
+		Optional 55-150 45 fraxnigr
+		Optional 55-200 45 prunsero
+		Optional 55-85 45 ulmuamer
+		SiteSelection  PatchCutting	55%   25
+			CohortsRemoved SpeciesList
+		>>Species 	Selection	
+		>>-------	--------
+		acerrubr 	55-150(20%)
+		betupapy	55-110(20%)
+		betualle	55-300(20%)
+		fraxnigr	55-150(20%)
+		fraxpenn	55-150(20%)
+		prunsero	55-200(20%)
+		ulmuamer	55-85(20%)
+		tsugcana	800
+
+Prescription Upland_Spruce_Fir_Clearcut<<12
+	StandRanking  Economic
+		>>Species	EconomicRank	MinimumAge
+		>>------	------------	-----------
+		piceglau	100		55
+		abiebals	100		40
+		MinimumAge	55 
+	ForestTypeTable << spruce fir
+	>> InclusionRule ageRange percentCells species
+	Optional 55-120 45 piceglau
+	Optional 55-90 45 abiebals
+	SiteSelection PatchCutting   50%   250
+	CohortsRemoved ClearCut
+				
+Prescription Spruce_Fir_Seedtree<<13
+				StandRanking	Economic
+				>>Species	EconomicRank	MinimumAge
+				>>-------	-----------	----------
+				piceglau	100	55
+				abiebals	100	40
+		MinimumAge	55
+				ForestTypeTable << spruce-fir
+				>> InclusionRule ageRange percentCells species
+			Optional 55-120 45 piceglau
+			Optional 55-90 45 abiebals
+				SiteSelection Complete
+			CohortsRemoved SpeciesList
+		>>Species 	Selection
+		>>-------	--------
+		abiebals	30-90(80%)
+		acerrubr 	All
+		acersacc	All
+		betualle 	All
+		betupapy	All 
+		carycord	All
+		caryovat	All
+		castdent	All
+		fagugran	All	
+		fraxamer	All
+		fraxnigr	All
+		fraxpenn	All
+		piceglau 	30-120(80%)
+		picemari 	All
+		pinubank	All
+		pinuresi	All
+		pinustro	All
+		pinusylv	All
+		popubals	All
+		popugran	All 
+		poputrem	All
+		prunsero	All
+		queralba	All
+		quercocc	All
+		querelli	All	
+		quermacr 	All
+		querrubr 	All
+		quervelu	All
+		thujocci	All
+		tiliamer 	All
+		ulmuamer	All
+		tsugcana	800
+
+Prescription	Jackpine_Clearcut_no_plant<<14
+		StandRanking	Economic
+		>>Species	EconomicRank	MinimumAge
+		>>-------	-----------	----------
+		pinubank	100	35
+		MinimumAge	35
+				ForestTypeTable << jack pine
+				>> InclusionRule ageRange percentCells species
+				Required 35-100 highest pinubank
+				SiteSelection Complete
+			CohortsRemoved ClearCut
+			
+Prescription	Jackpine_Clearcut_plant<<15
+		StandRanking	Economic
+		>>Species	EconomicRank	MinimumAge
+		>>-------	-----------	----------
+		pinubank	100	35
+		MinimumAge	35
+				ForestTypeTable << jack pine
+				>> InclusionRule ageRange percentCells species
+				Required 35-100 highest pinubank
+				SiteSelection Complete
+			CohortsRemoved ClearCut
+			Plant pinubank pinuresi			
+			
+		
+Prescription Northern_Hardwoods_Patch_CSP  <<16
+	StandRanking  Economic
+		>>Species	EconomicRank	MinimumAge
+		>>------	------------	-----------
+		acersacc 	100		65
+		fagugran	100		65
+		fraxamer 	100		65
+		tiliamer 	100		65
+		carycord	100		65
+		prunsero	100		65
+		querrubr	100		65
+	MinimumAge	65
+	ForestTypeTable << hardwoods
+	>> InclusionRule ageRange percentCells species
+	Optional 65-250 45 acersacc	
+	Optional 65-350	45 fagugran	
+	Optional 65-200 45 fraxamer
+	Optional 65-250 45 tiliamer
+	Optional 65-300 45 carycord
+	Optional 65-200 45 prunsero
+	Optional 65-150 45 querrubr
+	SiteSelection PatchCutting   75%   25
+	CohortsRemoved	SpeciesList
+		>>Species 	Selection >>(I limited max age slightly to account for 24" max dbh based on DNR prescription).
+		>>-------	--------
+		acersacc 	40-200(15%)
+		fraxamer 	40-150(15%)
+		fagugran	40-300(15%)
+		tiliamer 	40-200(15%)
+		carycord	40-250(15%)
+		caryovat	40-250(15%)
+		castdent	40-250(15%)
+		prunsero	40-150(15%)
+		quercocc	40-100(15%)
+		querrubr	40-200(15%)
+		tsugcana	800		
+	Plant castdent carycord caryovat quercocc
+		
+>>Indentical to above except without planting.
+Prescription Northern_Hardwoods_Patch_NO_PLANT  <<17
+	StandRanking  Economic
+		>>Species	EconomicRank	MinimumAge
+		>>------	------------	-----------
+		acersacc 	100		65
+		fagugran	100		65
+		fraxamer 	100		65
+		tiliamer 	100		65
+		carycord	100		65
+		prunsero	100		65
+		querrubr	100		65
+	MinimumAge	65
+	ForestTypeTable << hardwoods
+	>> InclusionRule ageRange percentCells species
+	Optional 65-250 45 acersacc	
+	Optional 65-350	45 fagugran	
+	Optional 65-200 45 fraxamer
+	Optional 65-250 45 tiliamer
+	Optional 65-300 45 carycord
+	Optional 65-200 45 prunsero
+	Optional 65-150 45 querrubr
+	SiteSelection PatchCutting   75%   25
+	CohortsRemoved	SpeciesList
+		>>Species 	Selection >>(I limited max age slightly to account for 24" max dbh based on DNR prescription).
+		>>-------	--------
+		acersacc 	40-200(15%)
+		fraxamer 	40-150(15%)
+		fagugran	40-300(15%)
+		tiliamer 	40-200(15%)
+		carycord	40-250(15%)
+		caryovat	40-250(15%)
+		castdent	40-250(15%)
+		prunsero	40-150(15%)
+		quercocc	40-100(15%)
+		querrubr	40-200(15%)
+		tsugcana	800
+	
+	
+Prescription North_Hardwood_Shelterwood  <<18
+	StandRanking  Economic
+		>>Species	EconomicRank	MinimumAge
+		>>------	------------	-----------
+		acersacc 	100		65
+		fagugran	100		65
+		fraxamer 	100		65
+		tiliamer 	100		65
+		carycord	100		65
+		prunsero	100		65
+		querrubr	100		65
+	MinimumAge	65
+	ForestTypeTable << hardwoods
+	>> InclusionRule ageRange percentCells species
+	Optional 65-250 45 acersacc	
+	Optional 65-350	45 fagugran	
+	Optional 65-200 45 fraxamer
+	Optional 65-250 45 tiliamer
+	Optional 65-300 45 carycord
+	Optional 65-200 45 prunsero
+	Optional 65-150 45 querrubr
+	SiteSelection Complete
+			CohortsRemoved SpeciesList
+		>>Species 	Selection
+		>>-------	--------
+		abiebals	All
+		acerrubr 	All
+		acersacc	50-250(60%)
+		betualle 	All
+		betupapy	All 
+		carycord	50-300(60%)
+		caryovat	50-300(60%)
+		castdent	50-300(60%)
+		fagugran	50-350(60%)	
+		fraxamer	50-200(60%)
+		fraxnigr	All
+		fraxpenn	All
+		piceglau 	All
+		picemari 	All
+		pinubank	All
+		pinuresi	All
+		pinustro	All
+		pinusylv	All
+		popubals	All
+		popugran	All 
+		poputrem	All
+		prunsero	50-200(60%)
+		queralba	All
+		quercocc	All
+		querelli	All	
+		quermacr 	All
+		querrubr 	50-250(60%)
+		quervelu	All
+		thujocci	All
+		tiliamer 	50-250(60%)
+		ulmuamer	All
+		tsugcana	800	
+	SingleRepeat 20
+	CohortsRemoved	SpeciesList
+		acersacc	50-250
+		carycord	50-300
+		caryovat	50-300
+		castdent	50-300
+		fagugran	50-350
+		fraxamer	50-200
+		prunsero	50-200
+		querrubr 	50-250
+		tiliamer	50-250
+		tsugcana	800	
+				
+Prescription	Oak_Clearcut_no_plant<<19
+		StandRanking	Economic
+		>>Species	EconomicRank	MinimumAge
+		>>-------	-----------	----------
+		querrubr	100	50
+		quermacr 	100	50
+		queralba	100	50
+		querelli	100	50
+				MinimumAge	50
+				ForestTypeTable << oak
+				>> InclusionRule ageRange percentCells species
+				Optional 50-250 45 querrubr
+				Optional 50-300 45 quermacr
+				Optional 50-400 45 queralba
+				Optional 50-200 45	querelli
+				Optional 50-200 45 quervelu
+				SiteSelection Complete
+			CohortsRemoved ClearCut
+			
+
+Prescription	Oak_Clearcut_plant<<20
+		StandRanking	Economic
+		>>Species	EconomicRank	MinimumAge
+		>>-------	-----------	----------
+		querrubr	100	50
+		quermacr 	100	50
+		queralba	100	50
+		querelli	100	50
+				MinimumAge	50
+				ForestTypeTable << oak
+				>> InclusionRule ageRange percentCells species
+				Optional 50-250 45 querrubr
+				Optional 50-300 45 quermacr
+				Optional 50-400 45 queralba
+				Optional 50-200 45	querelli
+				Optional 50-200 45 quervelu
+				SiteSelection Complete
+			CohortsRemoved ClearCut
+			Plant pinubank pinuresi				
+			
+Prescription Oak_Seedtree<<21
+		StandRanking	Economic
+		>>Species	EconomicRank	MinimumAge
+		>>-------	-----------	----------
+		querrubr	100	50
+		quermacr 	100	50
+		queralba	100	50
+		querelli	100	50
+				MinimumAge	50
+				ForestTypeTable << oak
+				>> InclusionRule ageRange percentCells species
+				Optional 50-250 45 querrubr
+				Optional 50-300 45 quermacr
+				Optional 50-400 45 queralba
+				Optional 50-200 45	querelli
+				Optional 50-200 45 quervelu
+				SiteSelection Complete
+			CohortsRemoved SpeciesList
+		>>Species 	Selection
+		>>-------	--------
+		abiebals	All
+		acerrubr 	All
+		acersacc	All
+		betualle 	All
+		betupapy	All 
+		carycord	All
+		caryovat	All
+		castdent	All
+		fagugran	All	
+		fraxamer	All
+		fraxnigr	All
+		fraxpenn	All
+		piceglau 	All
+		picemari 	All
+		pinubank	All
+		pinuresi	All
+		pinustro	All
+		pinusylv	All
+		popubals	All
+		popugran	All 
+		poputrem	All
+		prunsero	All
+		queralba	50-400(80%)
+		quercocc	50-150(80%)
+		querelli	50-200(80%)	
+		quermacr 	50-300(80%)
+		querrubr 	50-250(80%)
+		quervelu	50-250(80%)
+		thujocci	All
+		tiliamer 	All
+		ulmuamer	All
+		tsugcana	800
+
+Prescription Oak_Shelterwood<<22
+		StandRanking	Economic
+		>>Species	EconomicRank	MinimumAge
+		>>-------	-----------	----------
+		querrubr	100	50
+		quermacr 	100	50
+		queralba	100	50
+		querelli	100	50
+		quervelu	100	50
+				MinimumAge	50
+				ForestTypeTable << oak
+				>> InclusionRule ageRange percentCells species
+				Optional 50-250 45 querrubr
+				Optional 50-300 45 quermacr
+				Optional 50-400 45 queralba
+				Optional 50-200 45	querelli
+				Optional 50-500 highrdy quervelu	
+				SiteSelection Complete
+			CohortsRemoved SpeciesList
+		>>Species 	Selection
+		>>-------	--------
+		abiebals	All
+		acerrubr 	All
+		acersacc	All
+		betualle 	All
+		betupapy	All 
+		carycord	50-300(60%)
+		caryovat	50-300(60%)
+		castdent	50-300(60%)
+		fagugran	50-350(60%)	
+		fraxamer	All
+		fraxnigr	All
+		fraxpenn	All
+		piceglau 	All
+		picemari 	All
+		pinubank	All
+		pinuresi	All
+		pinustro	All
+		pinusylv	All
+		popubals	All
+		popugran	All 
+		poputrem	All
+		prunsero	All
+		queralba	50-400(60%)
+		quercocc	50-150(60%)
+		querelli	50-200(60%)	
+		quermacr 	50-300(60%)
+		querrubr 	50-250(60%)
+		quervelu	50-200(60%)
+		thujocci	All
+		tiliamer 	All
+		ulmuamer	All
+		tsugcana	800	
+	SingleRepeat 20
+	CohortsRemoved	SpeciesList
+		queralba	50-400
+		quercocc	50-150
+		querelli	50-200	
+		quermacr 	50-300
+		querrubr 	50-250
+		quervelu	50-200
+		fagugran	50-350
+		tsugcana	800
+	
+Prescription Oak_Thinning<<23
+		StandRanking	Economic
+		>>Species	EconomicRank	MinimumAge
+		>>-------	-----------	----------
+		querrubr	100	65
+		quermacr 	100	65
+		queralba	100	65
+		querelli	100	65
+		quervelu	100	65
+				MinimumAge	65
+				ForestTypeTable << oak
+				>> InclusionRule ageRange percentCells species
+				Optional 65-250 45 querrubr
+				Optional 65-300 45 quermacr
+				Optional 65-400 45 queralba
+				Optional 65-200 45	querelli
+				Optional 65-200 45 quervelu		
+		SiteSelection Complete
+		CohortsRemoved SpeciesList
+		>>Species 	Selection	ASSUMES A THINNING FROM ABOVE (I.E. CUTTING THE OLDEST COHORTS)
+		>>-------	--------
+		abiebals	50-80(5%)
+		acerrubr 	100-150(5%)
+		acersacc	150-250(5%)
+		betualle 	200-300(5%)
+		betupapy	80-110(5%) 
+		carycord	200-300(10%)
+		caryovat	200-300(10%)
+		castdent	200-300(10%)
+		fagugran	250-350(10%)
+		fraxamer	150-200(5%)
+		fraxnigr	100-150(5%)
+		fraxpenn	100-150(5%)
+		piceglau 	80-120(5%)
+		picemari 	150-215(5%)
+		pinubank	100-120(5%)
+		pinuresi	200-250(5%)
+		pinustro	250-350(5%)
+		pinusylv	200-250(5%)
+		popubals	80-120(5%)
+		popugran	80-125(5%)
+		poputrem	70-100(5%)
+		prunsero	150-200(10%)
+		queralba	200-400(10%)
+		quercocc	75-150(10%)
+		querelli	100-200(10%)
+		quermacr 	150-300(10%)
+		querrubr 	150-250(10%)
+		quervelu	100-200(10%)
+		thujocci	200-350(5%)
+		tiliamer 	100-250(5%)
+		ulmuamer	70-85(5%)
+		tsugcana	800
+		
+Prescription Oak_Patch<<24
+		StandRanking	Economic
+		>>Species	EconomicRank	MinimumAge
+		>>-------	-----------	----------
+		querrubr	100	65
+		quermacr 	100	65
+		queralba	100	65
+		querelli	100	65
+		quervelu	100	65
+				MinimumAge	50
+				ForestTypeTable << oak
+				>> InclusionRule ageRange percentCells species
+				Optional 65-250 45 querrubr
+				Optional 65-300 45 quermacr
+				Optional 65-400 45 queralba
+				Optional 65-200 45	querelli	
+				Optional 65-200 45 quervelu		
+	SiteSelection PatchCutting   75%   25
+	CohortsRemoved	SpeciesList
+		>>Species 	Selection
+		>>-------	--------
+		fagugran	40-350(15%)
+		quermacr 	40-300(15%)
+		querrubr 	40-250(15%)
+		carycord	40-300(15%)
+		caryovat	40-300(15%)
+		castdent	40-300(15%)
+		queralba	40-500(15%)
+		quercocc	40-150(15%)
+		querelli	40-200(15%)	
+		quervelu	40-200(15%)
+		tsugcana	800			
+Prescription Redpine_Clearcut_no_plant
+	StandRanking 		Economic
+		>>Species	EconomicRank	MinimumAge
+		>>------	------------	-----------
+		pinuresi	100		35
+	MinimumAge		55
+	ForestTypeTable << red pine
+	>> InclusionRule ageRange percentCells species
+	Required 55-250 highest pinuresi
+	SiteSelection Complete
+	CohortsRemoved ClearCut
+		
+Prescription Redpine_Clearcut_plant<<25
+	StandRanking 		Economic
+		>>Species	EconomicRank	MinimumAge
+		>>------	------------	-----------
+		pinuresi	100		35
+	MinimumAge		55
+	ForestTypeTable << red pine
+	>> InclusionRule ageRange percentCells species
+	Required 55-250 highest pinuresi
+	SiteSelection Complete
+	CohortsRemoved ClearCut
+	Plant pinuresi pinubank
+	
+Prescription Redpine_Seedtree<<26
+	StandRanking 		Economic
+		>>Species	EconomicRank	MinimumAge
+		>>------	------------	-----------
+		pinuresi	100		35
+	MinimumAge		55
+	ForestTypeTable << red pine
+	>> InclusionRule ageRange percentCells species
+	Required 55-250 highest pinuresi
+	SiteSelection Complete
+	CohortsRemoved SpeciesList
+		>>Species 	Selection
+		>>-------	--------
+		abiebals	All
+		acerrubr 	All
+		acersacc	All
+		betualle 	All
+		betupapy	All 
+		carycord	All
+		caryovat	All
+		castdent	All
+		fagugran	All	
+		fraxamer	All
+		fraxnigr	All
+		fraxpenn	All
+		piceglau 	All
+		picemari 	All
+		pinubank	40-70(80%)
+		pinuresi	50-250(80%)
+		pinustro	All
+		pinusylv	All
+		popubals	All
+		popugran	All 
+		poputrem	All
+		prunsero	All
+		queralba	All
+		quercocc	All
+		querelli	All	
+		quermacr 	All
+		querrubr 	All
+		quervelu	All
+		thujocci	All
+		tiliamer 	All
+		ulmuamer	All
+		tsugcana	800
+		
+Prescription Redpine_Shelterwood<<27
+	StandRanking 		Economic
+		>>Species	EconomicRank	MinimumAge
+		>>------	------------	-----------
+		pinuresi	100		35
+	MinimumAge		55
+		ForestTypeTable << red pine
+		>> InclusionRule ageRange percentCells species
+		Required 55-250 highest pinuresi
+		SiteSelection Complete
+	CohortsRemoved SpeciesList
+		>>Species 	Selection
+		>>-------	--------
+		abiebals	30-90(60%)
+		acerrubr 	All
+		acersacc	All
+		betualle 	All
+		betupapy	All 
+		carycord	All
+		caryovat	All
+		castdent	All
+		fagugran	All	
+		fraxamer	All
+		fraxnigr	All
+		fraxpenn	All
+		piceglau 	50-250(60%)
+		picemari 	All
+		pinubank	40-70(80%)
+		pinuresi	50-250(60%)
+		pinustro	50-250(60%)
+		pinusylv	All
+		popubals	All
+		popugran	All 
+		poputrem	All
+		prunsero	All
+		queralba	All
+		quercocc	All
+		querelli	All	
+		quermacr 	All
+		querrubr 	All
+		quervelu	All
+		thujocci	All
+		tiliamer 	All
+		ulmuamer	All
+		tsugcana	800
+	SingleRepeat 15
+	CohortsRemoved	SpeciesList
+		pinuresi	20-250
+		pinustro	20-350
+		piceglau 	20-250
+		abiebals	20-90
+		tsugcana	800	
+	
+Prescription Redpine_Thinning<<28
+	StandRanking 		Economic
+		>>Species	EconomicRank	MinimumAge
+		>>------	------------	-----------
+		pinuresi	100		40
+	MinimumAge		40
+		ForestTypeTable << red pine
+		>> InclusionRule ageRange percentCells species
+		Required 40-250 highest pinuresi
+		SiteSelection Complete
+	CohortsRemoved SpeciesList
+		>>Species 	Selection
+		>>-------	--------
+		abiebals	50-80(30%)
+		acerrubr 	100-150(5%)
+		acersacc	150-250(5%)
+		betualle 	200-300(5%)
+		betupapy	80-110(5%) 
+		carycord	200-300(5%)
+		caryovat	200-300(5%)
+		castdent	200-300(5%)
+		fagugran	250-350(5%)
+		fraxamer	150-200(5%)
+		fraxnigr	100-150(5%)
+		fraxpenn	100-150(5%)
+		piceglau 	80-120(5%)
+		picemari 	150-215(5%)
+		pinubank	100-120(5%)
+		pinuresi	30-250(30%)
+		pinustro	30-350(30%)
+		pinusylv	200-250(5%)
+		popubals	80-120(5%)
+		popugran	80-125(5%)
+		poputrem	70-100(5%)
+		prunsero	150-200(5%)
+		queralba	200-400(5%)
+		quercocc	75-150(5%)
+		querelli	100-200(5%)
+		quermacr 	150-300(5%)
+		querrubr 	150-250(5%)
+		quervelu	100-200(5%)
+		thujocci	200-350(5%)
+		tiliamer 	100-250(5%)
+		ulmuamer	70-85(5%)
+		tsugcana	800
+
+Prescription Redpine_Patch<<29
+	StandRanking 		Economic
+		>>Species	EconomicRank	MinimumAge
+		>>------	------------	-----------
+		pinuresi	100		50
+	MinimumAge		50
+		ForestTypeTable << red pine
+		>> InclusionRule ageRange percentCells species
+		Required 55-250 highest pinuresi
+	SiteSelection PatchCutting   75%   25
+	CohortsRemoved	SpeciesList
+		>>Species 	Selection
+		>>-------	--------
+		pinubank	50-120(15%)
+		pinuresi	50-250(15%)
+		pinustro	50-350(15%)
+		pinusylv	50-250(15%)
+		tsugcana	800		
+		
+Prescription Black_Spruce_Swamp_Clearcut<<30
+	StandRanking 		Economic
+		>>Species	EconomicRank	MinimumAge
+		>>------	------------	-----------
+		picemari	100		55
+	MinimumAge		55
+	ForestTypeTable << black spruce
+	>> InclusionRule ageRange percentCells species
+	Required 55-250 highest picemari
+	SiteSelection Complete
+	CohortsRemoved ClearCut
+	
+Prescription Black_Spruce_Swamp_Seedtree<<31
+	StandRanking 		Economic
+		>>Species	EconomicRank	MinimumAge
+		>>------	------------	-----------
+		picemari	100		55
+	MinimumAge		55
+	ForestTypeTable << black spruce
+	>> InclusionRule ageRange percentCells species
+	Required 55-250 highest picemari
+	SiteSelection Complete
+	CohortsRemoved SpeciesList
+		>>Species 	Selection
+		>>-------	--------
+		abiebals	All
+		acerrubr 	All
+		acersacc	All
+		betualle 	All
+		betupapy	All 
+		carycord	All
+		caryovat	All
+		castdent	All
+		fagugran	All	
+		fraxamer	All
+		fraxnigr	All
+		fraxpenn	All
+		piceglau 	All
+		picemari 	50-215(80%)
+		pinubank	All
+		pinuresi	All
+		pinustro	All
+		pinusylv	All
+		popubals	All
+		popugran	All 
+		poputrem	All
+		prunsero	All
+		queralba	All
+		quercocc	All
+		querelli	All	
+		quermacr 	All
+		querrubr 	All
+		quervelu	All
+		thujocci	All
+		tiliamer 	All
+		ulmuamer	All
+		tsugcana	800		
+
+Prescription White_Pine_Clearcut<<32
+	StandRanking 		Economic
+		>>Species	EconomicRank	MinimumAge
+		>>------	------------	-----------
+	pinustro	100		55
+	MinimumAge		55
+	ForestTypeTable << white pine
+	>> InclusionRule ageRange percentCells species
+	Required 55-350 highest pinustro
+	SiteSelection Complete
+	CohortsRemoved ClearCut
+	
+Prescription White_Pine_Seedtree<<33
+	StandRanking 		Economic
+		>>Species	EconomicRank	MinimumAge
+		>>------	------------	-----------
+	pinustro	100		55
+	MinimumAge		55
+	ForestTypeTable << white pine
+	>> InclusionRule ageRange percentCells species
+	Required 55-350 highest pinustro
+	SiteSelection Complete
+	CohortsRemoved SpeciesList
+		>>Species 	Selection
+		>>-------	--------
+		abiebals	All
+		acerrubr 	All
+		acersacc	All
+		betualle 	All
+		betupapy	All 
+		carycord	All
+		caryovat	All
+		castdent	All
+		fagugran	All	
+		fraxamer	All
+		fraxnigr	All
+		fraxpenn	All
+		piceglau 	All
+		picemari 	All
+		pinubank	All
+		pinuresi	All
+		pinustro	50-350(75%)
+		pinusylv	All
+		popubals	All
+		popugran	All 
+		poputrem	All
+		prunsero	All
+		queralba	All
+		quercocc	All
+		querelli	All	
+		quermacr 	All
+		querrubr 	All
+		quervelu	All
+		thujocci	All
+		tiliamer 	All
+		ulmuamer	All
+		tsugcana	800		
+		
+Prescription White_Pine_Shelterwood<<34
+	StandRanking 		Economic
+		>>Species	EconomicRank	MinimumAge
+		>>------	------------	-----------
+	pinustro	100		55
+	MinimumAge		55
+	ForestTypeTable << white pine
+	>> InclusionRule ageRange percentCells species
+	Required 55-350 highest pinustro
+	SiteSelection Complete
+	CohortsRemoved SpeciesList
+		>>Species 	Selection
+		>>-------	--------
+		abiebals	All
+		acerrubr 	All
+		acersacc	All
+		betualle 	All
+		betupapy	All 
+		carycord	All
+		caryovat	All
+		castdent	All
+		fagugran	All	
+		fraxamer	All
+		fraxnigr	All
+		fraxpenn	All
+		piceglau 	All
+		picemari 	All
+		pinubank	All
+		pinuresi	50-250(50%)
+		pinustro	50-350(50%)
+		pinusylv	All
+		popubals	All
+		popugran	All 
+		poputrem	All
+		prunsero	All
+		queralba	All
+		quercocc	All
+		querelli	All	
+		quermacr 	All
+		querrubr 	All
+		quervelu	All
+		thujocci	All
+		tiliamer 	All
+		ulmuamer	All
+		tsugcana	800		
+SingleRepeat 15
+CohortsRemoved	SpeciesList
+		pinuresi	20-250
+		pinustro	20-350
+		
+		
+Prescription White_Pine_Thinning<<35
+	StandRanking 		Economic
+		>>Species	EconomicRank	MinimumAge
+		>>------	------------	-----------
+	pinustro	100		55
+	MinimumAge		55
+	ForestTypeTable << white pine
+	>> InclusionRule ageRange percentCells species
+	Required 55-350 highest pinustro
+	SiteSelection Complete
+	CohortsRemoved SpeciesList
+		>>Species 	Selection
+		>>-------	--------
+		abiebals	50-80(5%)
+		acerrubr 	100-150(5%)
+		acersacc	150-250(5%)
+		betualle 	200-300(5%)
+		betupapy	80-110(5%) 
+		carycord	200-300(5%)
+		caryovat	200-300(5%)
+		castdent	200-300(5%)
+		fagugran	250-350(5%)
+		fraxamer	150-200(5%)
+		fraxnigr	100-150(5%)
+		fraxpenn	100-150(5%)
+		piceglau 	80-120(5%)
+		picemari 	150-215(5%)
+		pinubank	100-120(5%)
+		pinuresi	30-250(30%)
+		pinustro	30-350(30%)
+		pinusylv	200-250(5%)
+		popubals	80-120(5%)
+		popugran	80-125(5%)
+		poputrem	70-100(5%)
+		prunsero	150-200(5%)
+		queralba	200-400(5%)
+		quercocc	75-150(5%)
+		querelli	100-200(5%)
+		quermacr 	150-300(5%)
+		querrubr 	150-250(5%)
+		quervelu	100-200(5%)
+		thujocci	200-350(5%)
+		tiliamer 	100-250(5%)
+		ulmuamer	70-85(5%)
+		tsugcana	800
+		
+Prescription White_Pine_Patch<<36
+	StandRanking 		Economic
+		>>Species	EconomicRank	MinimumAge
+		>>------	------------	-----------
+	pinustro	100		55
+	MinimumAge		55
+	ForestTypeTable << white pine
+	>> InclusionRule ageRange percentCells species
+	Required 55-350 highest pinustro
+	SiteSelection PatchCutting   75%   25	
+	CohortsRemoved	SpeciesList
+		>>Species 	Selection
+		>>-------	--------
+		pinustro	55-350(20%)
+		pinuresi	55-250(20%)
+		pinubank	55-250(20%)
+		pinusylv	55-250(20%)
+		tsugcana	800		
+
+
+		
+>> -----------------------------------------------------------
+HarvestImplementations
+
+>>Michigan Management Area Descriptions
+>>0=0 non forest
+>>1=private non-industrial
+>>2=USFS
+>>3=MI_DNR
+>>4=PIF
+>>5=NPS
+>>6=Conservation Holder
+>>7 pnif non active reserve
+
+>>Rotation period = (5 yrs/timestep)/(rotation period years)*100 = percent of landscape to be harvested per timestep. 
+>>(e.g. 5/70 yr rotation * 100 = 7 target %)
+
+>>ma	presc	target%	start	stop	COMMENTS
+2	Aspen_Clearcut_no_plant	1.58%	0	150
+3	Aspen_Clearcut_no_plant	2.18%	0	150
+4	Aspen_Clearcut_no_plant	3.12%	0	150
+1	Aspen_Clearcut_plant	0.02%	0	150
+2	Aspen_Clearcut_plant	0.03%	0	150
+3	Aspen_Clearcut_plant	0.04%	0	150
+4	Aspen_Clearcut_plant	0.06%	0	150
+2	Jackpine_Clearcut_no_plant	0.16%	0	150
+3	Jackpine_Clearcut_no_plant	0.11%	0	150
+4	Jackpine_Clearcut_no_plant	0.01%	0	150
+1	Jackpine_Clearcut_plant	0.12%	0	150
+2	Jackpine_Clearcut_plant	0.65%	0	150
+3	Jackpine_Clearcut_plant	0.42%	0	150
+4	Jackpine_Clearcut_plant	0.04%	0	150
+1	North_Hardwood_Shelterwood	0.11%	0	5
+1	North_Hardwood_Shelterwood	0.11%	5	10
+1	North_Hardwood_Shelterwood	0.11%	10	15
+1	North_Hardwood_Shelterwood	0.11%	15	20
+1	North_Hardwood_Shelterwood	0.11%	20	25
+1	North_Hardwood_Shelterwood	0.11%	25	30
+1	North_Hardwood_Shelterwood	0.11%	30	35
+1	North_Hardwood_Shelterwood	0.11%	35	40
+1	North_Hardwood_Shelterwood	0.11%	40	45
+1	North_Hardwood_Shelterwood	0.11%	45	50
+1	North_Hardwood_Shelterwood	0.11%	50	55
+1	North_Hardwood_Shelterwood	0.11%	55	60
+1	North_Hardwood_Shelterwood	0.11%	60	65
+1	North_Hardwood_Shelterwood	0.11%	65	70
+1	North_Hardwood_Shelterwood	0.11%	70	75
+1	North_Hardwood_Shelterwood	0.11%	75	80
+1	North_Hardwood_Shelterwood	0.11%	80	85
+1	North_Hardwood_Shelterwood	0.11%	85	90
+1	North_Hardwood_Shelterwood	0.11%	90	95
+1	North_Hardwood_Shelterwood	0.11%	95	100
+1	North_Hardwood_Shelterwood	0.11%	100	105
+1	North_Hardwood_Shelterwood	0.11%	105	110
+1	North_Hardwood_Shelterwood	0.11%	110	115
+1	North_Hardwood_Shelterwood	0.11%	115	120
+1	North_Hardwood_Shelterwood	0.11%	120	125
+1	North_Hardwood_Shelterwood	0.11%	125	130
+1	North_Hardwood_Shelterwood	0.11%	130	135
+1	North_Hardwood_Shelterwood	0.11%	135	140
+1	North_Hardwood_Shelterwood	0.11%	140	145
+1	North_Hardwood_Shelterwood	0.11%	145	150
+2	North_Hardwood_Shelterwood	0.08%	0	5
+2	North_Hardwood_Shelterwood	0.08%	5	10
+2	North_Hardwood_Shelterwood	0.08%	10	15
+2	North_Hardwood_Shelterwood	0.08%	15	20
+2	North_Hardwood_Shelterwood	0.08%	20	25
+2	North_Hardwood_Shelterwood	0.08%	25	30
+2	North_Hardwood_Shelterwood	0.08%	30	35
+2	North_Hardwood_Shelterwood	0.08%	35	40
+2	North_Hardwood_Shelterwood	0.08%	40	45
+2	North_Hardwood_Shelterwood	0.08%	45	50
+2	North_Hardwood_Shelterwood	0.08%	50	55
+2	North_Hardwood_Shelterwood	0.08%	55	60
+2	North_Hardwood_Shelterwood	0.08%	60	65
+2	North_Hardwood_Shelterwood	0.08%	65	70
+2	North_Hardwood_Shelterwood	0.08%	70	75
+2	North_Hardwood_Shelterwood	0.08%	75	80
+2	North_Hardwood_Shelterwood	0.08%	80	85
+2	North_Hardwood_Shelterwood	0.08%	85	90
+2	North_Hardwood_Shelterwood	0.08%	90	95
+2	North_Hardwood_Shelterwood	0.08%	95	100
+2	North_Hardwood_Shelterwood	0.08%	100	105
+2	North_Hardwood_Shelterwood	0.08%	105	110
+2	North_Hardwood_Shelterwood	0.08%	110	115
+2	North_Hardwood_Shelterwood	0.08%	115	120
+2	North_Hardwood_Shelterwood	0.08%	120	125
+2	North_Hardwood_Shelterwood	0.08%	125	130
+2	North_Hardwood_Shelterwood	0.08%	130	135
+2	North_Hardwood_Shelterwood	0.08%	135	140
+2	North_Hardwood_Shelterwood	0.08%	140	145
+2	North_Hardwood_Shelterwood	0.08%	145	150
+3	North_Hardwood_Shelterwood	0.09%	0	5
+3	North_Hardwood_Shelterwood	0.09%	5	10
+3	North_Hardwood_Shelterwood	0.09%	10	15
+3	North_Hardwood_Shelterwood	0.09%	15	20
+3	North_Hardwood_Shelterwood	0.09%	20	25
+3	North_Hardwood_Shelterwood	0.09%	25	30
+3	North_Hardwood_Shelterwood	0.09%	30	35
+3	North_Hardwood_Shelterwood	0.09%	35	40
+3	North_Hardwood_Shelterwood	0.09%	40	45
+3	North_Hardwood_Shelterwood	0.09%	45	50
+3	North_Hardwood_Shelterwood	0.09%	50	55
+3	North_Hardwood_Shelterwood	0.09%	55	60
+3	North_Hardwood_Shelterwood	0.09%	60	65
+3	North_Hardwood_Shelterwood	0.09%	65	70
+3	North_Hardwood_Shelterwood	0.09%	70	75
+3	North_Hardwood_Shelterwood	0.09%	75	80
+3	North_Hardwood_Shelterwood	0.09%	80	85
+3	North_Hardwood_Shelterwood	0.09%	85	90
+3	North_Hardwood_Shelterwood	0.09%	90	95
+3	North_Hardwood_Shelterwood	0.09%	95	100
+3	North_Hardwood_Shelterwood	0.09%	100	105
+3	North_Hardwood_Shelterwood	0.09%	105	110
+3	North_Hardwood_Shelterwood	0.09%	110	115
+3	North_Hardwood_Shelterwood	0.09%	115	120
+3	North_Hardwood_Shelterwood	0.09%	120	125
+3	North_Hardwood_Shelterwood	0.09%	125	130
+3	North_Hardwood_Shelterwood	0.09%	130	135
+3	North_Hardwood_Shelterwood	0.09%	135	140
+3	North_Hardwood_Shelterwood	0.09%	140	145
+3	North_Hardwood_Shelterwood	0.09%	145	150
+4	North_Hardwood_Shelterwood	0.06%	0	5
+4	North_Hardwood_Shelterwood	0.06%	5	10
+4	North_Hardwood_Shelterwood	0.06%	10	15
+4	North_Hardwood_Shelterwood	0.06%	15	20
+4	North_Hardwood_Shelterwood	0.06%	20	25
+4	North_Hardwood_Shelterwood	0.06%	25	30
+4	North_Hardwood_Shelterwood	0.06%	30	35
+4	North_Hardwood_Shelterwood	0.06%	35	40
+4	North_Hardwood_Shelterwood	0.06%	40	45
+4	North_Hardwood_Shelterwood	0.06%	45	50
+4	North_Hardwood_Shelterwood	0.06%	50	55
+4	North_Hardwood_Shelterwood	0.06%	55	60
+4	North_Hardwood_Shelterwood	0.06%	60	65
+4	North_Hardwood_Shelterwood	0.06%	65	70
+4	North_Hardwood_Shelterwood	0.06%	70	75
+4	North_Hardwood_Shelterwood	0.06%	75	80
+4	North_Hardwood_Shelterwood	0.06%	80	85
+4	North_Hardwood_Shelterwood	0.06%	85	90
+4	North_Hardwood_Shelterwood	0.06%	90	95
+4	North_Hardwood_Shelterwood	0.06%	95	100
+4	North_Hardwood_Shelterwood	0.06%	100	105
+4	North_Hardwood_Shelterwood	0.06%	105	110
+4	North_Hardwood_Shelterwood	0.06%	110	115
+4	North_Hardwood_Shelterwood	0.06%	115	120
+4	North_Hardwood_Shelterwood	0.06%	120	125
+4	North_Hardwood_Shelterwood	0.06%	125	130
+4	North_Hardwood_Shelterwood	0.06%	130	135
+4	North_Hardwood_Shelterwood	0.06%	135	140
+4	North_Hardwood_Shelterwood	0.06%	140	145
+4	North_Hardwood_Shelterwood	0.06%	145	150
+
+>>This below is the original prescription for Michigan northern hardwoods patch.
+>>1	Northern_Hardwoods_Patch	4.62%	0	150
+>>2	Northern_Hardwoods_Patch	3.39%	0	150
+>>3	Northern_Hardwoods_Patch	3.67%	0	150
+>>4	Northern_Hardwoods_Patch	2.67%	0	150
+
+
+>>This below is the 8% CSP prescription for MICHIGAN northern hardwoods patch
+>>went to 6% rather than 20% when output results in similar planted percents to MN with 8%.
+>>Then went to 6x20=120% to match the x20 I did in MN
+
+1	Northern_Hardwoods_Patch_CSP	5.554%	0	50
+2	Northern_Hardwoods_Patch_CSP	4.068%	0	50
+3	Northern_Hardwoods_Patch_CSP	4.404%	0	50
+4	Northern_Hardwoods_Patch_CSP	3.204%	0	50
+
+>>This below is the remaining % CSP no planting for northern hardwoods patch
+>>1	Northern_Hardwoods_Patch_NO_PLANT	1.848%	0	150
+>>2	Northern_Hardwoods_Patch_NO_PLANT	1.356%	0	150
+>>3	Northern_Hardwoods_Patch_NO_PLANT	1.468%	0	150
+>>4	Northern_Hardwoods_Patch_NO_PLANT	1.068%	0	150
+
+>>This is the last 100 years of no planting nhard patchcutting with original prescription.
+1	Northern_Hardwoods_Patch_NO_PLANT	4.62%	51	150
+2	Northern_Hardwoods_Patch_NO_PLANT	3.39%	51	150
+3	Northern_Hardwoods_Patch_NO_PLANT	3.67%	51	150
+4	Northern_Hardwoods_Patch_NO_PLANT	2.67%	51	150
+
+
+
+2	Oak_Clearcut_no_plant	0.53%	0	150
+3	Oak_Clearcut_no_plant	0.40%	0	150
+4	Oak_Clearcut_no_plant	0.20%	0	150
+1	Oak_Clearcut_plant	0.05%	0	150
+2	Oak_Clearcut_plant	0.13%	0	150
+3	Oak_Clearcut_plant	0.10%	0	150
+4	Oak_Clearcut_plant	0.05%	0	150
+1	Oak_Patch	1.04%	0	150
+2	Oak_Patch	1.27%	0	150
+3	Oak_Patch	0.95%	0	150
+4	Oak_Patch	0.47%	0	150
+1	Oak_Seedtree	0.10%	0	5
+1	Oak_Seedtree	0.10%	5	10
+1	Oak_Seedtree	0.10%	10	15
+1	Oak_Seedtree	0.10%	15	20
+1	Oak_Seedtree	0.10%	20	25
+1	Oak_Seedtree	0.10%	25	30
+1	Oak_Seedtree	0.10%	30	35
+1	Oak_Seedtree	0.10%	35	40
+1	Oak_Seedtree	0.10%	40	45
+1	Oak_Seedtree	0.10%	45	50
+1	Oak_Seedtree	0.10%	50	55
+1	Oak_Seedtree	0.10%	55	60
+1	Oak_Seedtree	0.10%	60	65
+1	Oak_Seedtree	0.10%	65	70
+1	Oak_Seedtree	0.10%	70	75
+1	Oak_Seedtree	0.10%	75	80
+1	Oak_Seedtree	0.10%	80	85
+1	Oak_Seedtree	0.10%	85	90
+1	Oak_Seedtree	0.10%	90	95
+1	Oak_Seedtree	0.10%	95	100
+1	Oak_Seedtree	0.10%	100	105
+1	Oak_Seedtree	0.10%	105	110
+1	Oak_Seedtree	0.10%	110	115
+1	Oak_Seedtree	0.10%	115	120
+1	Oak_Seedtree	0.10%	120	125
+1	Oak_Seedtree	0.10%	125	130
+1	Oak_Seedtree	0.10%	130	135
+1	Oak_Seedtree	0.10%	135	140
+1	Oak_Seedtree	0.10%	140	145
+1	Oak_Seedtree	0.10%	145	150
+2	Oak_Seedtree	0.13%	0	5
+2	Oak_Seedtree	0.13%	5	10
+2	Oak_Seedtree	0.13%	10	15
+2	Oak_Seedtree	0.13%	15	20
+2	Oak_Seedtree	0.13%	20	25
+2	Oak_Seedtree	0.13%	25	30
+2	Oak_Seedtree	0.13%	30	35
+2	Oak_Seedtree	0.13%	35	40
+2	Oak_Seedtree	0.13%	40	45
+2	Oak_Seedtree	0.13%	45	50
+2	Oak_Seedtree	0.13%	50	55
+2	Oak_Seedtree	0.13%	55	60
+2	Oak_Seedtree	0.13%	60	65
+2	Oak_Seedtree	0.13%	65	70
+2	Oak_Seedtree	0.13%	70	75
+2	Oak_Seedtree	0.13%	75	80
+2	Oak_Seedtree	0.13%	80	85
+2	Oak_Seedtree	0.13%	85	90
+2	Oak_Seedtree	0.13%	90	95
+2	Oak_Seedtree	0.13%	95	100
+2	Oak_Seedtree	0.13%	100	105
+2	Oak_Seedtree	0.13%	105	110
+2	Oak_Seedtree	0.13%	110	115
+2	Oak_Seedtree	0.13%	115	120
+2	Oak_Seedtree	0.13%	120	125
+2	Oak_Seedtree	0.13%	125	130
+2	Oak_Seedtree	0.13%	130	135
+2	Oak_Seedtree	0.13%	135	140
+2	Oak_Seedtree	0.13%	140	145
+2	Oak_Seedtree	0.13%	145	150
+3	Oak_Seedtree	0.10%	0	5
+3	Oak_Seedtree	0.10%	5	10
+3	Oak_Seedtree	0.10%	10	15
+3	Oak_Seedtree	0.10%	15	20
+3	Oak_Seedtree	0.10%	20	25
+3	Oak_Seedtree	0.10%	25	30
+3	Oak_Seedtree	0.10%	30	35
+3	Oak_Seedtree	0.10%	35	40
+3	Oak_Seedtree	0.10%	40	45
+3	Oak_Seedtree	0.10%	45	50
+3	Oak_Seedtree	0.10%	50	55
+3	Oak_Seedtree	0.10%	55	60
+3	Oak_Seedtree	0.10%	60	65
+3	Oak_Seedtree	0.10%	65	70
+3	Oak_Seedtree	0.10%	70	75
+3	Oak_Seedtree	0.10%	75	80
+3	Oak_Seedtree	0.10%	80	85
+3	Oak_Seedtree	0.10%	85	90
+3	Oak_Seedtree	0.10%	90	95
+3	Oak_Seedtree	0.10%	95	100
+3	Oak_Seedtree	0.10%	100	105
+3	Oak_Seedtree	0.10%	105	110
+3	Oak_Seedtree	0.10%	110	115
+3	Oak_Seedtree	0.10%	115	120
+3	Oak_Seedtree	0.10%	120	125
+3	Oak_Seedtree	0.10%	125	130
+3	Oak_Seedtree	0.10%	130	135
+3	Oak_Seedtree	0.10%	135	140
+3	Oak_Seedtree	0.10%	140	145
+3	Oak_Seedtree	0.10%	145	150
+4	Oak_Seedtree	0.05%	0	5
+4	Oak_Seedtree	0.05%	5	10
+4	Oak_Seedtree	0.05%	10	15
+4	Oak_Seedtree	0.05%	15	20
+4	Oak_Seedtree	0.05%	20	25
+4	Oak_Seedtree	0.05%	25	30
+4	Oak_Seedtree	0.05%	30	35
+4	Oak_Seedtree	0.05%	35	40
+4	Oak_Seedtree	0.05%	40	45
+4	Oak_Seedtree	0.05%	45	50
+4	Oak_Seedtree	0.05%	50	55
+4	Oak_Seedtree	0.05%	55	60
+4	Oak_Seedtree	0.05%	60	65
+4	Oak_Seedtree	0.05%	65	70
+4	Oak_Seedtree	0.05%	70	75
+4	Oak_Seedtree	0.05%	75	80
+4	Oak_Seedtree	0.05%	80	85
+4	Oak_Seedtree	0.05%	85	90
+4	Oak_Seedtree	0.05%	90	95
+4	Oak_Seedtree	0.05%	95	100
+4	Oak_Seedtree	0.05%	100	105
+4	Oak_Seedtree	0.05%	105	110
+4	Oak_Seedtree	0.05%	110	115
+4	Oak_Seedtree	0.05%	115	120
+4	Oak_Seedtree	0.05%	120	125
+4	Oak_Seedtree	0.05%	125	130
+4	Oak_Seedtree	0.05%	130	135
+4	Oak_Seedtree	0.05%	135	140
+4	Oak_Seedtree	0.05%	140	145
+4	Oak_Seedtree	0.05%	145	150
+1	Oak_Shelterwood	0.42%	0	5
+1	Oak_Shelterwood	0.42%	5	10
+1	Oak_Shelterwood	0.42%	10	15
+1	Oak_Shelterwood	0.42%	15	20
+1	Oak_Shelterwood	0.42%	20	25
+1	Oak_Shelterwood	0.42%	25	30
+1	Oak_Shelterwood	0.42%	30	35
+1	Oak_Shelterwood	0.42%	35	40
+1	Oak_Shelterwood	0.42%	40	45
+1	Oak_Shelterwood	0.42%	45	50
+1	Oak_Shelterwood	0.42%	50	55
+1	Oak_Shelterwood	0.42%	55	60
+1	Oak_Shelterwood	0.42%	60	65
+1	Oak_Shelterwood	0.42%	65	70
+1	Oak_Shelterwood	0.42%	70	75
+1	Oak_Shelterwood	0.42%	75	80
+1	Oak_Shelterwood	0.42%	80	85
+1	Oak_Shelterwood	0.42%	85	90
+1	Oak_Shelterwood	0.42%	90	95
+1	Oak_Shelterwood	0.42%	95	100
+1	Oak_Shelterwood	0.42%	100	105
+1	Oak_Shelterwood	0.42%	105	110
+1	Oak_Shelterwood	0.42%	110	115
+1	Oak_Shelterwood	0.42%	115	120
+1	Oak_Shelterwood	0.42%	120	125
+1	Oak_Shelterwood	0.42%	125	130
+1	Oak_Shelterwood	0.42%	130	135
+1	Oak_Shelterwood	0.42%	135	140
+1	Oak_Shelterwood	0.42%	140	145
+1	Oak_Shelterwood	0.42%	145	150
+2	Oak_Shelterwood	0.51%	0	5
+2	Oak_Shelterwood	0.51%	5	10
+2	Oak_Shelterwood	0.51%	10	15
+2	Oak_Shelterwood	0.51%	15	20
+2	Oak_Shelterwood	0.51%	20	25
+2	Oak_Shelterwood	0.51%	25	30
+2	Oak_Shelterwood	0.51%	30	35
+2	Oak_Shelterwood	0.51%	35	40
+2	Oak_Shelterwood	0.51%	40	45
+2	Oak_Shelterwood	0.51%	45	50
+2	Oak_Shelterwood	0.51%	50	55
+2	Oak_Shelterwood	0.51%	55	60
+2	Oak_Shelterwood	0.51%	60	65
+2	Oak_Shelterwood	0.51%	65	70
+2	Oak_Shelterwood	0.51%	70	75
+2	Oak_Shelterwood	0.51%	75	80
+2	Oak_Shelterwood	0.51%	80	85
+2	Oak_Shelterwood	0.51%	85	90
+2	Oak_Shelterwood	0.51%	90	95
+2	Oak_Shelterwood	0.51%	95	100
+2	Oak_Shelterwood	0.51%	100	105
+2	Oak_Shelterwood	0.51%	105	110
+2	Oak_Shelterwood	0.51%	110	115
+2	Oak_Shelterwood	0.51%	115	120
+2	Oak_Shelterwood	0.51%	120	125
+2	Oak_Shelterwood	0.51%	125	130
+2	Oak_Shelterwood	0.51%	130	135
+2	Oak_Shelterwood	0.51%	135	140
+2	Oak_Shelterwood	0.51%	140	145
+2	Oak_Shelterwood	0.51%	145	150
+3	Oak_Shelterwood	0.38%	0	5
+3	Oak_Shelterwood	0.38%	5	10
+3	Oak_Shelterwood	0.38%	10	15
+3	Oak_Shelterwood	0.38%	15	20
+3	Oak_Shelterwood	0.38%	20	25
+3	Oak_Shelterwood	0.38%	25	30
+3	Oak_Shelterwood	0.38%	30	35
+3	Oak_Shelterwood	0.38%	35	40
+3	Oak_Shelterwood	0.38%	40	45
+3	Oak_Shelterwood	0.38%	45	50
+3	Oak_Shelterwood	0.38%	50	55
+3	Oak_Shelterwood	0.38%	55	60
+3	Oak_Shelterwood	0.38%	60	65
+3	Oak_Shelterwood	0.38%	65	70
+3	Oak_Shelterwood	0.38%	70	75
+3	Oak_Shelterwood	0.38%	75	80
+3	Oak_Shelterwood	0.38%	80	85
+3	Oak_Shelterwood	0.38%	85	90
+3	Oak_Shelterwood	0.38%	90	95
+3	Oak_Shelterwood	0.38%	95	100
+3	Oak_Shelterwood	0.38%	100	105
+3	Oak_Shelterwood	0.38%	105	110
+3	Oak_Shelterwood	0.38%	110	115
+3	Oak_Shelterwood	0.38%	115	120
+3	Oak_Shelterwood	0.38%	120	125
+3	Oak_Shelterwood	0.38%	125	130
+3	Oak_Shelterwood	0.38%	130	135
+3	Oak_Shelterwood	0.38%	135	140
+3	Oak_Shelterwood	0.38%	140	145
+3	Oak_Shelterwood	0.38%	145	150
+4	Oak_Shelterwood	0.19%	0	5
+4	Oak_Shelterwood	0.19%	5	10
+4	Oak_Shelterwood	0.19%	10	15
+4	Oak_Shelterwood	0.19%	15	20
+4	Oak_Shelterwood	0.19%	20	25
+4	Oak_Shelterwood	0.19%	25	30
+4	Oak_Shelterwood	0.19%	30	35
+4	Oak_Shelterwood	0.19%	35	40
+4	Oak_Shelterwood	0.19%	40	45
+4	Oak_Shelterwood	0.19%	45	50
+4	Oak_Shelterwood	0.19%	50	55
+4	Oak_Shelterwood	0.19%	55	60
+4	Oak_Shelterwood	0.19%	60	65
+4	Oak_Shelterwood	0.19%	65	70
+4	Oak_Shelterwood	0.19%	70	75
+4	Oak_Shelterwood	0.19%	75	80
+4	Oak_Shelterwood	0.19%	80	85
+4	Oak_Shelterwood	0.19%	85	90
+4	Oak_Shelterwood	0.19%	90	95
+4	Oak_Shelterwood	0.19%	95	100
+4	Oak_Shelterwood	0.19%	100	105
+4	Oak_Shelterwood	0.19%	105	110
+4	Oak_Shelterwood	0.19%	110	115
+4	Oak_Shelterwood	0.19%	115	120
+4	Oak_Shelterwood	0.19%	120	125
+4	Oak_Shelterwood	0.19%	125	130
+4	Oak_Shelterwood	0.19%	130	135
+4	Oak_Shelterwood	0.19%	135	140
+4	Oak_Shelterwood	0.19%	140	145
+4	Oak_Shelterwood	0.19%	145	150
+1	Oak_Thinning	1.43%	0	150
+2	Oak_Thinning	1.75%	0	150
+3	Oak_Thinning	1.31%	0	150
+4	Oak_Thinning	0.64%	0	150
+2	Paperbirch_Clearcut	0.08%	0	150
+3	Paperbirch_Clearcut	0.13%	0	150
+4	Paperbirch_Clearcut	0.23%	0	150
+1	Paperbirch_Seedtree	0.04%	0	5
+1	Paperbirch_Seedtree	0.04%	5	10
+1	Paperbirch_Seedtree	0.04%	10	15
+1	Paperbirch_Seedtree	0.04%	15	20
+1	Paperbirch_Seedtree	0.04%	20	25
+1	Paperbirch_Seedtree	0.04%	25	30
+1	Paperbirch_Seedtree	0.04%	30	35
+1	Paperbirch_Seedtree	0.04%	35	40
+1	Paperbirch_Seedtree	0.04%	40	45
+1	Paperbirch_Seedtree	0.04%	45	50
+1	Paperbirch_Seedtree	0.04%	50	55
+1	Paperbirch_Seedtree	0.04%	55	60
+1	Paperbirch_Seedtree	0.04%	60	65
+1	Paperbirch_Seedtree	0.04%	65	70
+1	Paperbirch_Seedtree	0.04%	70	75
+1	Paperbirch_Seedtree	0.04%	75	80
+1	Paperbirch_Seedtree	0.04%	80	85
+1	Paperbirch_Seedtree	0.04%	85	90
+1	Paperbirch_Seedtree	0.04%	90	95
+1	Paperbirch_Seedtree	0.04%	95	100
+1	Paperbirch_Seedtree	0.04%	100	105
+1	Paperbirch_Seedtree	0.04%	105	110
+1	Paperbirch_Seedtree	0.04%	110	115
+1	Paperbirch_Seedtree	0.04%	115	120
+1	Paperbirch_Seedtree	0.04%	120	125
+1	Paperbirch_Seedtree	0.04%	125	130
+1	Paperbirch_Seedtree	0.04%	130	135
+1	Paperbirch_Seedtree	0.04%	135	140
+1	Paperbirch_Seedtree	0.04%	140	145
+1	Paperbirch_Seedtree	0.04%	145	150
+2	Paperbirch_Seedtree	0.03%	0	5
+2	Paperbirch_Seedtree	0.03%	5	10
+2	Paperbirch_Seedtree	0.03%	10	15
+2	Paperbirch_Seedtree	0.03%	15	20
+2	Paperbirch_Seedtree	0.03%	20	25
+2	Paperbirch_Seedtree	0.03%	25	30
+2	Paperbirch_Seedtree	0.03%	30	35
+2	Paperbirch_Seedtree	0.03%	35	40
+2	Paperbirch_Seedtree	0.03%	40	45
+2	Paperbirch_Seedtree	0.03%	45	50
+2	Paperbirch_Seedtree	0.03%	50	55
+2	Paperbirch_Seedtree	0.03%	55	60
+2	Paperbirch_Seedtree	0.03%	60	65
+2	Paperbirch_Seedtree	0.03%	65	70
+2	Paperbirch_Seedtree	0.03%	70	75
+2	Paperbirch_Seedtree	0.03%	75	80
+2	Paperbirch_Seedtree	0.03%	80	85
+2	Paperbirch_Seedtree	0.03%	85	90
+2	Paperbirch_Seedtree	0.03%	90	95
+2	Paperbirch_Seedtree	0.03%	95	100
+2	Paperbirch_Seedtree	0.03%	100	105
+2	Paperbirch_Seedtree	0.03%	105	110
+2	Paperbirch_Seedtree	0.03%	110	115
+2	Paperbirch_Seedtree	0.03%	115	120
+2	Paperbirch_Seedtree	0.03%	120	125
+2	Paperbirch_Seedtree	0.03%	125	130
+2	Paperbirch_Seedtree	0.03%	130	135
+2	Paperbirch_Seedtree	0.03%	135	140
+2	Paperbirch_Seedtree	0.03%	140	145
+2	Paperbirch_Seedtree	0.03%	145	150
+3	Paperbirch_Seedtree	0.04%	0	5
+3	Paperbirch_Seedtree	0.04%	5	10
+3	Paperbirch_Seedtree	0.04%	10	15
+3	Paperbirch_Seedtree	0.04%	15	20
+3	Paperbirch_Seedtree	0.04%	20	25
+3	Paperbirch_Seedtree	0.04%	25	30
+3	Paperbirch_Seedtree	0.04%	30	35
+3	Paperbirch_Seedtree	0.04%	35	40
+3	Paperbirch_Seedtree	0.04%	40	45
+3	Paperbirch_Seedtree	0.04%	45	50
+3	Paperbirch_Seedtree	0.04%	50	55
+3	Paperbirch_Seedtree	0.04%	55	60
+3	Paperbirch_Seedtree	0.04%	60	65
+3	Paperbirch_Seedtree	0.04%	65	70
+3	Paperbirch_Seedtree	0.04%	70	75
+3	Paperbirch_Seedtree	0.04%	75	80
+3	Paperbirch_Seedtree	0.04%	80	85
+3	Paperbirch_Seedtree	0.04%	85	90
+3	Paperbirch_Seedtree	0.04%	90	95
+3	Paperbirch_Seedtree	0.04%	95	100
+3	Paperbirch_Seedtree	0.04%	100	105
+3	Paperbirch_Seedtree	0.04%	105	110
+3	Paperbirch_Seedtree	0.04%	110	115
+3	Paperbirch_Seedtree	0.04%	115	120
+3	Paperbirch_Seedtree	0.04%	120	125
+3	Paperbirch_Seedtree	0.04%	125	130
+3	Paperbirch_Seedtree	0.04%	130	135
+3	Paperbirch_Seedtree	0.04%	135	140
+3	Paperbirch_Seedtree	0.04%	140	145
+3	Paperbirch_Seedtree	0.04%	145	150
+4	Paperbirch_Seedtree	0.07%	0	5
+4	Paperbirch_Seedtree	0.07%	5	10
+4	Paperbirch_Seedtree	0.07%	10	15
+4	Paperbirch_Seedtree	0.07%	15	20
+4	Paperbirch_Seedtree	0.07%	20	25
+4	Paperbirch_Seedtree	0.07%	25	30
+4	Paperbirch_Seedtree	0.07%	30	35
+4	Paperbirch_Seedtree	0.07%	35	40
+4	Paperbirch_Seedtree	0.07%	40	45
+4	Paperbirch_Seedtree	0.07%	45	50
+4	Paperbirch_Seedtree	0.07%	50	55
+4	Paperbirch_Seedtree	0.07%	55	60
+4	Paperbirch_Seedtree	0.07%	60	65
+4	Paperbirch_Seedtree	0.07%	65	70
+4	Paperbirch_Seedtree	0.07%	70	75
+4	Paperbirch_Seedtree	0.07%	75	80
+4	Paperbirch_Seedtree	0.07%	80	85
+4	Paperbirch_Seedtree	0.07%	85	90
+4	Paperbirch_Seedtree	0.07%	90	95
+4	Paperbirch_Seedtree	0.07%	95	100
+4	Paperbirch_Seedtree	0.07%	100	105
+4	Paperbirch_Seedtree	0.07%	105	110
+4	Paperbirch_Seedtree	0.07%	110	115
+4	Paperbirch_Seedtree	0.07%	115	120
+4	Paperbirch_Seedtree	0.07%	120	125
+4	Paperbirch_Seedtree	0.07%	125	130
+4	Paperbirch_Seedtree	0.07%	130	135
+4	Paperbirch_Seedtree	0.07%	135	140
+4	Paperbirch_Seedtree	0.07%	140	145
+4	Paperbirch_Seedtree	0.07%	145	150
+1	Paperbirch_Shelterwood	0.01%	0	5
+1	Paperbirch_Shelterwood	0.01%	5	10
+1	Paperbirch_Shelterwood	0.01%	10	15
+1	Paperbirch_Shelterwood	0.01%	15	20
+1	Paperbirch_Shelterwood	0.01%	20	25
+1	Paperbirch_Shelterwood	0.01%	25	30
+1	Paperbirch_Shelterwood	0.01%	30	35
+1	Paperbirch_Shelterwood	0.01%	35	40
+1	Paperbirch_Shelterwood	0.01%	40	45
+1	Paperbirch_Shelterwood	0.01%	45	50
+1	Paperbirch_Shelterwood	0.01%	50	55
+1	Paperbirch_Shelterwood	0.01%	55	60
+1	Paperbirch_Shelterwood	0.01%	60	65
+1	Paperbirch_Shelterwood	0.01%	65	70
+1	Paperbirch_Shelterwood	0.01%	70	75
+1	Paperbirch_Shelterwood	0.01%	75	80
+1	Paperbirch_Shelterwood	0.01%	80	85
+1	Paperbirch_Shelterwood	0.01%	85	90
+1	Paperbirch_Shelterwood	0.01%	90	95
+1	Paperbirch_Shelterwood	0.01%	95	100
+1	Paperbirch_Shelterwood	0.01%	100	105
+1	Paperbirch_Shelterwood	0.01%	105	110
+1	Paperbirch_Shelterwood	0.01%	110	115
+1	Paperbirch_Shelterwood	0.01%	115	120
+1	Paperbirch_Shelterwood	0.01%	120	125
+1	Paperbirch_Shelterwood	0.01%	125	130
+1	Paperbirch_Shelterwood	0.01%	130	135
+1	Paperbirch_Shelterwood	0.01%	135	140
+1	Paperbirch_Shelterwood	0.01%	140	145
+1	Paperbirch_Shelterwood	0.01%	145	150
+2	Paperbirch_Shelterwood	0.01%	0	5
+2	Paperbirch_Shelterwood	0.01%	5	10
+2	Paperbirch_Shelterwood	0.01%	10	15
+2	Paperbirch_Shelterwood	0.01%	15	20
+2	Paperbirch_Shelterwood	0.01%	20	25
+2	Paperbirch_Shelterwood	0.01%	25	30
+2	Paperbirch_Shelterwood	0.01%	30	35
+2	Paperbirch_Shelterwood	0.01%	35	40
+2	Paperbirch_Shelterwood	0.01%	40	45
+2	Paperbirch_Shelterwood	0.01%	45	50
+2	Paperbirch_Shelterwood	0.01%	50	55
+2	Paperbirch_Shelterwood	0.01%	55	60
+2	Paperbirch_Shelterwood	0.01%	60	65
+2	Paperbirch_Shelterwood	0.01%	65	70
+2	Paperbirch_Shelterwood	0.01%	70	75
+2	Paperbirch_Shelterwood	0.01%	75	80
+2	Paperbirch_Shelterwood	0.01%	80	85
+2	Paperbirch_Shelterwood	0.01%	85	90
+2	Paperbirch_Shelterwood	0.01%	90	95
+2	Paperbirch_Shelterwood	0.01%	95	100
+2	Paperbirch_Shelterwood	0.01%	100	105
+2	Paperbirch_Shelterwood	0.01%	105	110
+2	Paperbirch_Shelterwood	0.01%	110	115
+2	Paperbirch_Shelterwood	0.01%	115	120
+2	Paperbirch_Shelterwood	0.01%	120	125
+2	Paperbirch_Shelterwood	0.01%	125	130
+2	Paperbirch_Shelterwood	0.01%	130	135
+2	Paperbirch_Shelterwood	0.01%	135	140
+2	Paperbirch_Shelterwood	0.01%	140	145
+2	Paperbirch_Shelterwood	0.01%	145	150
+3	Paperbirch_Shelterwood	0.01%	0	5
+3	Paperbirch_Shelterwood	0.01%	5	10
+3	Paperbirch_Shelterwood	0.01%	10	15
+3	Paperbirch_Shelterwood	0.01%	15	20
+3	Paperbirch_Shelterwood	0.01%	20	25
+3	Paperbirch_Shelterwood	0.01%	25	30
+3	Paperbirch_Shelterwood	0.01%	30	35
+3	Paperbirch_Shelterwood	0.01%	35	40
+3	Paperbirch_Shelterwood	0.01%	40	45
+3	Paperbirch_Shelterwood	0.01%	45	50
+3	Paperbirch_Shelterwood	0.01%	50	55
+3	Paperbirch_Shelterwood	0.01%	55	60
+3	Paperbirch_Shelterwood	0.01%	60	65
+3	Paperbirch_Shelterwood	0.01%	65	70
+3	Paperbirch_Shelterwood	0.01%	70	75
+3	Paperbirch_Shelterwood	0.01%	75	80
+3	Paperbirch_Shelterwood	0.01%	80	85
+3	Paperbirch_Shelterwood	0.01%	85	90
+3	Paperbirch_Shelterwood	0.01%	90	95
+3	Paperbirch_Shelterwood	0.01%	95	100
+3	Paperbirch_Shelterwood	0.01%	100	105
+3	Paperbirch_Shelterwood	0.01%	105	110
+3	Paperbirch_Shelterwood	0.01%	110	115
+3	Paperbirch_Shelterwood	0.01%	115	120
+3	Paperbirch_Shelterwood	0.01%	120	125
+3	Paperbirch_Shelterwood	0.01%	125	130
+3	Paperbirch_Shelterwood	0.01%	130	135
+3	Paperbirch_Shelterwood	0.01%	135	140
+3	Paperbirch_Shelterwood	0.01%	140	145
+3	Paperbirch_Shelterwood	0.01%	145	150
+4	Paperbirch_Shelterwood	0.02%	0	5
+4	Paperbirch_Shelterwood	0.02%	5	10
+4	Paperbirch_Shelterwood	0.02%	10	15
+4	Paperbirch_Shelterwood	0.02%	15	20
+4	Paperbirch_Shelterwood	0.02%	20	25
+4	Paperbirch_Shelterwood	0.02%	25	30
+4	Paperbirch_Shelterwood	0.02%	30	35
+4	Paperbirch_Shelterwood	0.02%	35	40
+4	Paperbirch_Shelterwood	0.02%	40	45
+4	Paperbirch_Shelterwood	0.02%	45	50
+4	Paperbirch_Shelterwood	0.02%	50	55
+4	Paperbirch_Shelterwood	0.02%	55	60
+4	Paperbirch_Shelterwood	0.02%	60	65
+4	Paperbirch_Shelterwood	0.02%	65	70
+4	Paperbirch_Shelterwood	0.02%	70	75
+4	Paperbirch_Shelterwood	0.02%	75	80
+4	Paperbirch_Shelterwood	0.02%	80	85
+4	Paperbirch_Shelterwood	0.02%	85	90
+4	Paperbirch_Shelterwood	0.02%	90	95
+4	Paperbirch_Shelterwood	0.02%	95	100
+4	Paperbirch_Shelterwood	0.02%	100	105
+4	Paperbirch_Shelterwood	0.02%	105	110
+4	Paperbirch_Shelterwood	0.02%	110	115
+4	Paperbirch_Shelterwood	0.02%	115	120
+4	Paperbirch_Shelterwood	0.02%	120	125
+4	Paperbirch_Shelterwood	0.02%	125	130
+4	Paperbirch_Shelterwood	0.02%	130	135
+4	Paperbirch_Shelterwood	0.02%	135	140
+4	Paperbirch_Shelterwood	0.02%	140	145
+4	Paperbirch_Shelterwood	0.02%	145	150
+2	Redpine_Clearcut_no_plant	0.04%	0	150
+3	Redpine_Clearcut_no_plant	0.02%	0	150
+4	Redpine_Clearcut_no_plant	0.003%	0	150
+1	Redpine_Clearcut_plant	0.04%	0	150
+2	Redpine_Clearcut_plant	0.16%	0	150
+3	Redpine_Clearcut_plant	0.10%	0	150
+4	Redpine_Clearcut_plant	0.01%	0	150
+1	Redpine_Patch	0.16%	0	150
+2	Redpine_Patch	0.36%	0	150
+3	Redpine_Patch	0.23%	0	150
+4	Redpine_Patch	0.03%	0	150
+1	Redpine_Seedtree	0.02%	0	5
+1	Redpine_Seedtree	0.02%	5	10
+1	Redpine_Seedtree	0.02%	10	15
+1	Redpine_Seedtree	0.02%	15	20
+1	Redpine_Seedtree	0.02%	20	25
+1	Redpine_Seedtree	0.02%	25	30
+1	Redpine_Seedtree	0.02%	30	35
+1	Redpine_Seedtree	0.02%	35	40
+1	Redpine_Seedtree	0.02%	40	45
+1	Redpine_Seedtree	0.02%	45	50
+1	Redpine_Seedtree	0.02%	50	55
+1	Redpine_Seedtree	0.02%	55	60
+1	Redpine_Seedtree	0.02%	60	65
+1	Redpine_Seedtree	0.02%	65	70
+1	Redpine_Seedtree	0.02%	70	75
+1	Redpine_Seedtree	0.02%	75	80
+1	Redpine_Seedtree	0.02%	80	85
+1	Redpine_Seedtree	0.02%	85	90
+1	Redpine_Seedtree	0.02%	90	95
+1	Redpine_Seedtree	0.02%	95	100
+1	Redpine_Seedtree	0.02%	100	105
+1	Redpine_Seedtree	0.02%	105	110
+1	Redpine_Seedtree	0.02%	110	115
+1	Redpine_Seedtree	0.02%	115	120
+1	Redpine_Seedtree	0.02%	120	125
+1	Redpine_Seedtree	0.02%	125	130
+1	Redpine_Seedtree	0.02%	130	135
+1	Redpine_Seedtree	0.02%	135	140
+1	Redpine_Seedtree	0.02%	140	145
+1	Redpine_Seedtree	0.02%	145	150
+2	Redpine_Seedtree	0.04%	0	5
+2	Redpine_Seedtree	0.04%	5	10
+2	Redpine_Seedtree	0.04%	10	15
+2	Redpine_Seedtree	0.04%	15	20
+2	Redpine_Seedtree	0.04%	20	25
+2	Redpine_Seedtree	0.04%	25	30
+2	Redpine_Seedtree	0.04%	30	35
+2	Redpine_Seedtree	0.04%	35	40
+2	Redpine_Seedtree	0.04%	40	45
+2	Redpine_Seedtree	0.04%	45	50
+2	Redpine_Seedtree	0.04%	50	55
+2	Redpine_Seedtree	0.04%	55	60
+2	Redpine_Seedtree	0.04%	60	65
+2	Redpine_Seedtree	0.04%	65	70
+2	Redpine_Seedtree	0.04%	70	75
+2	Redpine_Seedtree	0.04%	75	80
+2	Redpine_Seedtree	0.04%	80	85
+2	Redpine_Seedtree	0.04%	85	90
+2	Redpine_Seedtree	0.04%	90	95
+2	Redpine_Seedtree	0.04%	95	100
+2	Redpine_Seedtree	0.04%	100	105
+2	Redpine_Seedtree	0.04%	105	110
+2	Redpine_Seedtree	0.04%	110	115
+2	Redpine_Seedtree	0.04%	115	120
+2	Redpine_Seedtree	0.04%	120	125
+2	Redpine_Seedtree	0.04%	125	130
+2	Redpine_Seedtree	0.04%	130	135
+2	Redpine_Seedtree	0.04%	135	140
+2	Redpine_Seedtree	0.04%	140	145
+2	Redpine_Seedtree	0.04%	145	150
+3	Redpine_Seedtree	0.02%	0	5
+3	Redpine_Seedtree	0.02%	5	10
+3	Redpine_Seedtree	0.02%	10	15
+3	Redpine_Seedtree	0.02%	15	20
+3	Redpine_Seedtree	0.02%	20	25
+3	Redpine_Seedtree	0.02%	25	30
+3	Redpine_Seedtree	0.02%	30	35
+3	Redpine_Seedtree	0.02%	35	40
+3	Redpine_Seedtree	0.02%	40	45
+3	Redpine_Seedtree	0.02%	45	50
+3	Redpine_Seedtree	0.02%	50	55
+3	Redpine_Seedtree	0.02%	55	60
+3	Redpine_Seedtree	0.02%	60	65
+3	Redpine_Seedtree	0.02%	65	70
+3	Redpine_Seedtree	0.02%	70	75
+3	Redpine_Seedtree	0.02%	75	80
+3	Redpine_Seedtree	0.02%	80	85
+3	Redpine_Seedtree	0.02%	85	90
+3	Redpine_Seedtree	0.02%	90	95
+3	Redpine_Seedtree	0.02%	95	100
+3	Redpine_Seedtree	0.02%	100	105
+3	Redpine_Seedtree	0.02%	105	110
+3	Redpine_Seedtree	0.02%	110	115
+3	Redpine_Seedtree	0.02%	115	120
+3	Redpine_Seedtree	0.02%	120	125
+3	Redpine_Seedtree	0.02%	125	130
+3	Redpine_Seedtree	0.02%	130	135
+3	Redpine_Seedtree	0.02%	135	140
+3	Redpine_Seedtree	0.02%	140	145
+3	Redpine_Seedtree	0.02%	145	150
+4	Redpine_Seedtree	0.003%	0	5
+4	Redpine_Seedtree	0.003%	5	10
+4	Redpine_Seedtree	0.003%	10	15
+4	Redpine_Seedtree	0.003%	15	20
+4	Redpine_Seedtree	0.003%	20	25
+4	Redpine_Seedtree	0.003%	25	30
+4	Redpine_Seedtree	0.003%	30	35
+4	Redpine_Seedtree	0.003%	35	40
+4	Redpine_Seedtree	0.003%	40	45
+4	Redpine_Seedtree	0.003%	45	50
+4	Redpine_Seedtree	0.003%	50	55
+4	Redpine_Seedtree	0.003%	55	60
+4	Redpine_Seedtree	0.003%	60	65
+4	Redpine_Seedtree	0.003%	65	70
+4	Redpine_Seedtree	0.003%	70	75
+4	Redpine_Seedtree	0.003%	75	80
+4	Redpine_Seedtree	0.003%	80	85
+4	Redpine_Seedtree	0.003%	85	90
+4	Redpine_Seedtree	0.003%	90	95
+4	Redpine_Seedtree	0.003%	95	100
+4	Redpine_Seedtree	0.003%	100	105
+4	Redpine_Seedtree	0.003%	105	110
+4	Redpine_Seedtree	0.003%	110	115
+4	Redpine_Seedtree	0.003%	115	120
+4	Redpine_Seedtree	0.003%	120	125
+4	Redpine_Seedtree	0.003%	125	130
+4	Redpine_Seedtree	0.003%	130	135
+4	Redpine_Seedtree	0.003%	135	140
+4	Redpine_Seedtree	0.003%	140	145
+4	Redpine_Seedtree	0.003%	145	150
+1	Redpine_Shelterwood	0.04%	0	5
+1	Redpine_Shelterwood	0.04%	5	10
+1	Redpine_Shelterwood	0.04%	10	15
+1	Redpine_Shelterwood	0.04%	15	20
+1	Redpine_Shelterwood	0.04%	20	25
+1	Redpine_Shelterwood	0.04%	25	30
+1	Redpine_Shelterwood	0.04%	30	35
+1	Redpine_Shelterwood	0.04%	35	40
+1	Redpine_Shelterwood	0.04%	40	45
+1	Redpine_Shelterwood	0.04%	45	50
+1	Redpine_Shelterwood	0.04%	50	55
+1	Redpine_Shelterwood	0.04%	55	60
+1	Redpine_Shelterwood	0.04%	60	65
+1	Redpine_Shelterwood	0.04%	65	70
+1	Redpine_Shelterwood	0.04%	70	75
+1	Redpine_Shelterwood	0.04%	75	80
+1	Redpine_Shelterwood	0.04%	80	85
+1	Redpine_Shelterwood	0.04%	85	90
+1	Redpine_Shelterwood	0.04%	90	95
+1	Redpine_Shelterwood	0.04%	95	100
+1	Redpine_Shelterwood	0.04%	100	105
+1	Redpine_Shelterwood	0.04%	105	110
+1	Redpine_Shelterwood	0.04%	110	115
+1	Redpine_Shelterwood	0.04%	115	120
+1	Redpine_Shelterwood	0.04%	120	125
+1	Redpine_Shelterwood	0.04%	125	130
+1	Redpine_Shelterwood	0.04%	130	135
+1	Redpine_Shelterwood	0.04%	135	140
+1	Redpine_Shelterwood	0.04%	140	145
+1	Redpine_Shelterwood	0.04%	145	150
+2	Redpine_Shelterwood	0.09%	0	5
+2	Redpine_Shelterwood	0.09%	5	10
+2	Redpine_Shelterwood	0.09%	10	15
+2	Redpine_Shelterwood	0.09%	15	20
+2	Redpine_Shelterwood	0.09%	20	25
+2	Redpine_Shelterwood	0.09%	25	30
+2	Redpine_Shelterwood	0.09%	30	35
+2	Redpine_Shelterwood	0.09%	35	40
+2	Redpine_Shelterwood	0.09%	40	45
+2	Redpine_Shelterwood	0.09%	45	50
+2	Redpine_Shelterwood	0.09%	50	55
+2	Redpine_Shelterwood	0.09%	55	60
+2	Redpine_Shelterwood	0.09%	60	65
+2	Redpine_Shelterwood	0.09%	65	70
+2	Redpine_Shelterwood	0.09%	70	75
+2	Redpine_Shelterwood	0.09%	75	80
+2	Redpine_Shelterwood	0.09%	80	85
+2	Redpine_Shelterwood	0.09%	85	90
+2	Redpine_Shelterwood	0.09%	90	95
+2	Redpine_Shelterwood	0.09%	95	100
+2	Redpine_Shelterwood	0.09%	100	105
+2	Redpine_Shelterwood	0.09%	105	110
+2	Redpine_Shelterwood	0.09%	110	115
+2	Redpine_Shelterwood	0.09%	115	120
+2	Redpine_Shelterwood	0.09%	120	125
+2	Redpine_Shelterwood	0.09%	125	130
+2	Redpine_Shelterwood	0.09%	130	135
+2	Redpine_Shelterwood	0.09%	135	140
+2	Redpine_Shelterwood	0.09%	140	145
+2	Redpine_Shelterwood	0.09%	145	150
+3	Redpine_Shelterwood	0.06%	0	5
+3	Redpine_Shelterwood	0.06%	5	10
+3	Redpine_Shelterwood	0.06%	10	15
+3	Redpine_Shelterwood	0.06%	15	20
+3	Redpine_Shelterwood	0.06%	20	25
+3	Redpine_Shelterwood	0.06%	25	30
+3	Redpine_Shelterwood	0.06%	30	35
+3	Redpine_Shelterwood	0.06%	35	40
+3	Redpine_Shelterwood	0.06%	40	45
+3	Redpine_Shelterwood	0.06%	45	50
+3	Redpine_Shelterwood	0.06%	50	55
+3	Redpine_Shelterwood	0.06%	55	60
+3	Redpine_Shelterwood	0.06%	60	65
+3	Redpine_Shelterwood	0.06%	65	70
+3	Redpine_Shelterwood	0.06%	70	75
+3	Redpine_Shelterwood	0.06%	75	80
+3	Redpine_Shelterwood	0.06%	80	85
+3	Redpine_Shelterwood	0.06%	85	90
+3	Redpine_Shelterwood	0.06%	90	95
+3	Redpine_Shelterwood	0.06%	95	100
+3	Redpine_Shelterwood	0.06%	100	105
+3	Redpine_Shelterwood	0.06%	105	110
+3	Redpine_Shelterwood	0.06%	110	115
+3	Redpine_Shelterwood	0.06%	115	120
+3	Redpine_Shelterwood	0.06%	120	125
+3	Redpine_Shelterwood	0.06%	125	130
+3	Redpine_Shelterwood	0.06%	130	135
+3	Redpine_Shelterwood	0.06%	135	140
+3	Redpine_Shelterwood	0.06%	140	145
+3	Redpine_Shelterwood	0.06%	145	150
+4	Redpine_Shelterwood	0.01%	0	5
+4	Redpine_Shelterwood	0.01%	5	10
+4	Redpine_Shelterwood	0.01%	10	15
+4	Redpine_Shelterwood	0.01%	15	20
+4	Redpine_Shelterwood	0.01%	20	25
+4	Redpine_Shelterwood	0.01%	25	30
+4	Redpine_Shelterwood	0.01%	30	35
+4	Redpine_Shelterwood	0.01%	35	40
+4	Redpine_Shelterwood	0.01%	40	45
+4	Redpine_Shelterwood	0.01%	45	50
+4	Redpine_Shelterwood	0.01%	50	55
+4	Redpine_Shelterwood	0.01%	55	60
+4	Redpine_Shelterwood	0.01%	60	65
+4	Redpine_Shelterwood	0.01%	65	70
+4	Redpine_Shelterwood	0.01%	70	75
+4	Redpine_Shelterwood	0.01%	75	80
+4	Redpine_Shelterwood	0.01%	80	85
+4	Redpine_Shelterwood	0.01%	85	90
+4	Redpine_Shelterwood	0.01%	90	95
+4	Redpine_Shelterwood	0.01%	95	100
+4	Redpine_Shelterwood	0.01%	100	105
+4	Redpine_Shelterwood	0.01%	105	110
+4	Redpine_Shelterwood	0.01%	110	115
+4	Redpine_Shelterwood	0.01%	115	120
+4	Redpine_Shelterwood	0.01%	120	125
+4	Redpine_Shelterwood	0.01%	125	130
+4	Redpine_Shelterwood	0.01%	130	135
+4	Redpine_Shelterwood	0.01%	135	140
+4	Redpine_Shelterwood	0.01%	140	145
+4	Redpine_Shelterwood	0.01%	145	150
+1	Redpine_Thinning	0.52%	0	150
+2	Redpine_Thinning	1.16%	0	150
+3	Redpine_Thinning	0.73%	0	150
+4	Redpine_Thinning	0.10%	0	150
+1	Spruce_Fir_Seedtree	0.10%	0	5
+1	Spruce_Fir_Seedtree	0.10%	5	10
+1	Spruce_Fir_Seedtree	0.10%	10	15
+1	Spruce_Fir_Seedtree	0.10%	15	20
+1	Spruce_Fir_Seedtree	0.10%	20	25
+1	Spruce_Fir_Seedtree	0.10%	25	30
+1	Spruce_Fir_Seedtree	0.10%	30	35
+1	Spruce_Fir_Seedtree	0.10%	35	40
+1	Spruce_Fir_Seedtree	0.10%	40	45
+1	Spruce_Fir_Seedtree	0.10%	45	50
+1	Spruce_Fir_Seedtree	0.10%	50	55
+1	Spruce_Fir_Seedtree	0.10%	55	60
+1	Spruce_Fir_Seedtree	0.10%	60	65
+1	Spruce_Fir_Seedtree	0.10%	65	70
+1	Spruce_Fir_Seedtree	0.10%	70	75
+1	Spruce_Fir_Seedtree	0.10%	75	80
+1	Spruce_Fir_Seedtree	0.10%	80	85
+1	Spruce_Fir_Seedtree	0.10%	85	90
+1	Spruce_Fir_Seedtree	0.10%	90	95
+1	Spruce_Fir_Seedtree	0.10%	95	100
+1	Spruce_Fir_Seedtree	0.10%	100	105
+1	Spruce_Fir_Seedtree	0.10%	105	110
+1	Spruce_Fir_Seedtree	0.10%	110	115
+1	Spruce_Fir_Seedtree	0.10%	115	120
+1	Spruce_Fir_Seedtree	0.10%	120	125
+1	Spruce_Fir_Seedtree	0.10%	125	130
+1	Spruce_Fir_Seedtree	0.10%	130	135
+1	Spruce_Fir_Seedtree	0.10%	135	140
+1	Spruce_Fir_Seedtree	0.10%	140	145
+1	Spruce_Fir_Seedtree	0.10%	145	150
+2	Spruce_Fir_Seedtree	0.06%	0	5
+2	Spruce_Fir_Seedtree	0.06%	5	10
+2	Spruce_Fir_Seedtree	0.06%	10	15
+2	Spruce_Fir_Seedtree	0.06%	15	20
+2	Spruce_Fir_Seedtree	0.06%	20	25
+2	Spruce_Fir_Seedtree	0.06%	25	30
+2	Spruce_Fir_Seedtree	0.06%	30	35
+2	Spruce_Fir_Seedtree	0.06%	35	40
+2	Spruce_Fir_Seedtree	0.06%	40	45
+2	Spruce_Fir_Seedtree	0.06%	45	50
+2	Spruce_Fir_Seedtree	0.06%	50	55
+2	Spruce_Fir_Seedtree	0.06%	55	60
+2	Spruce_Fir_Seedtree	0.06%	60	65
+2	Spruce_Fir_Seedtree	0.06%	65	70
+2	Spruce_Fir_Seedtree	0.06%	70	75
+2	Spruce_Fir_Seedtree	0.06%	75	80
+2	Spruce_Fir_Seedtree	0.06%	80	85
+2	Spruce_Fir_Seedtree	0.06%	85	90
+2	Spruce_Fir_Seedtree	0.06%	90	95
+2	Spruce_Fir_Seedtree	0.06%	95	100
+2	Spruce_Fir_Seedtree	0.06%	100	105
+2	Spruce_Fir_Seedtree	0.06%	105	110
+2	Spruce_Fir_Seedtree	0.06%	110	115
+2	Spruce_Fir_Seedtree	0.06%	115	120
+2	Spruce_Fir_Seedtree	0.06%	120	125
+2	Spruce_Fir_Seedtree	0.06%	125	130
+2	Spruce_Fir_Seedtree	0.06%	130	135
+2	Spruce_Fir_Seedtree	0.06%	135	140
+2	Spruce_Fir_Seedtree	0.06%	140	145
+2	Spruce_Fir_Seedtree	0.06%	145	150
+3	Spruce_Fir_Seedtree	0.11%	0	5
+3	Spruce_Fir_Seedtree	0.11%	5	10
+3	Spruce_Fir_Seedtree	0.11%	10	15
+3	Spruce_Fir_Seedtree	0.11%	15	20
+3	Spruce_Fir_Seedtree	0.11%	20	25
+3	Spruce_Fir_Seedtree	0.11%	25	30
+3	Spruce_Fir_Seedtree	0.11%	30	35
+3	Spruce_Fir_Seedtree	0.11%	35	40
+3	Spruce_Fir_Seedtree	0.11%	40	45
+3	Spruce_Fir_Seedtree	0.11%	45	50
+3	Spruce_Fir_Seedtree	0.11%	50	55
+3	Spruce_Fir_Seedtree	0.11%	55	60
+3	Spruce_Fir_Seedtree	0.11%	60	65
+3	Spruce_Fir_Seedtree	0.11%	65	70
+3	Spruce_Fir_Seedtree	0.11%	70	75
+3	Spruce_Fir_Seedtree	0.11%	75	80
+3	Spruce_Fir_Seedtree	0.11%	80	85
+3	Spruce_Fir_Seedtree	0.11%	85	90
+3	Spruce_Fir_Seedtree	0.11%	90	95
+3	Spruce_Fir_Seedtree	0.11%	95	100
+3	Spruce_Fir_Seedtree	0.11%	100	105
+3	Spruce_Fir_Seedtree	0.11%	105	110
+3	Spruce_Fir_Seedtree	0.11%	110	115
+3	Spruce_Fir_Seedtree	0.11%	115	120
+3	Spruce_Fir_Seedtree	0.11%	120	125
+3	Spruce_Fir_Seedtree	0.11%	125	130
+3	Spruce_Fir_Seedtree	0.11%	130	135
+3	Spruce_Fir_Seedtree	0.11%	135	140
+3	Spruce_Fir_Seedtree	0.11%	140	145
+3	Spruce_Fir_Seedtree	0.11%	145	150
+4	Spruce_Fir_Seedtree	0.19%	0	5
+4	Spruce_Fir_Seedtree	0.19%	5	10
+4	Spruce_Fir_Seedtree	0.19%	10	15
+4	Spruce_Fir_Seedtree	0.19%	15	20
+4	Spruce_Fir_Seedtree	0.19%	20	25
+4	Spruce_Fir_Seedtree	0.19%	25	30
+4	Spruce_Fir_Seedtree	0.19%	30	35
+4	Spruce_Fir_Seedtree	0.19%	35	40
+4	Spruce_Fir_Seedtree	0.19%	40	45
+4	Spruce_Fir_Seedtree	0.19%	45	50
+4	Spruce_Fir_Seedtree	0.19%	50	55
+4	Spruce_Fir_Seedtree	0.19%	55	60
+4	Spruce_Fir_Seedtree	0.19%	60	65
+4	Spruce_Fir_Seedtree	0.19%	65	70
+4	Spruce_Fir_Seedtree	0.19%	70	75
+4	Spruce_Fir_Seedtree	0.19%	75	80
+4	Spruce_Fir_Seedtree	0.19%	80	85
+4	Spruce_Fir_Seedtree	0.19%	85	90
+4	Spruce_Fir_Seedtree	0.19%	90	95
+4	Spruce_Fir_Seedtree	0.19%	95	100
+4	Spruce_Fir_Seedtree	0.19%	100	105
+4	Spruce_Fir_Seedtree	0.19%	105	110
+4	Spruce_Fir_Seedtree	0.19%	110	115
+4	Spruce_Fir_Seedtree	0.19%	115	120
+4	Spruce_Fir_Seedtree	0.19%	120	125
+4	Spruce_Fir_Seedtree	0.19%	125	130
+4	Spruce_Fir_Seedtree	0.19%	130	135
+4	Spruce_Fir_Seedtree	0.19%	135	140
+4	Spruce_Fir_Seedtree	0.19%	140	145
+4	Spruce_Fir_Seedtree	0.19%	145	150
+2	Swamp_Hardwoods_Clear	0.10%	0	150
+3	Swamp_Hardwoods_Clear	0.15%	0	150
+4	Swamp_Hardwoods_Clear	0.46%	0	150
+1	Swamp_Hardwoods_Patch	0.10%	0	150
+2	Swamp_Hardwoods_Patch	0.06%	0	150
+3	Swamp_Hardwoods_Patch	0.08%	0	150
+4	Swamp_Hardwoods_Patch	0.25%	0	150
+1	Swamp_Hardwoods_Seedtree	0.02%	0	5
+1	Swamp_Hardwoods_Seedtree	0.02%	5	10
+1	Swamp_Hardwoods_Seedtree	0.02%	10	15
+1	Swamp_Hardwoods_Seedtree	0.02%	15	20
+1	Swamp_Hardwoods_Seedtree	0.02%	20	25
+1	Swamp_Hardwoods_Seedtree	0.02%	25	30
+1	Swamp_Hardwoods_Seedtree	0.02%	30	35
+1	Swamp_Hardwoods_Seedtree	0.02%	35	40
+1	Swamp_Hardwoods_Seedtree	0.02%	40	45
+1	Swamp_Hardwoods_Seedtree	0.02%	45	50
+1	Swamp_Hardwoods_Seedtree	0.02%	50	55
+1	Swamp_Hardwoods_Seedtree	0.02%	55	60
+1	Swamp_Hardwoods_Seedtree	0.02%	60	65
+1	Swamp_Hardwoods_Seedtree	0.02%	65	70
+1	Swamp_Hardwoods_Seedtree	0.02%	70	75
+1	Swamp_Hardwoods_Seedtree	0.02%	75	80
+1	Swamp_Hardwoods_Seedtree	0.02%	80	85
+1	Swamp_Hardwoods_Seedtree	0.02%	85	90
+1	Swamp_Hardwoods_Seedtree	0.02%	90	95
+1	Swamp_Hardwoods_Seedtree	0.02%	95	100
+1	Swamp_Hardwoods_Seedtree	0.02%	100	105
+1	Swamp_Hardwoods_Seedtree	0.02%	105	110
+1	Swamp_Hardwoods_Seedtree	0.02%	110	115
+1	Swamp_Hardwoods_Seedtree	0.02%	115	120
+1	Swamp_Hardwoods_Seedtree	0.02%	120	125
+1	Swamp_Hardwoods_Seedtree	0.02%	125	130
+1	Swamp_Hardwoods_Seedtree	0.02%	130	135
+1	Swamp_Hardwoods_Seedtree	0.02%	135	140
+1	Swamp_Hardwoods_Seedtree	0.02%	140	145
+1	Swamp_Hardwoods_Seedtree	0.02%	145	150
+2	Swamp_Hardwoods_Seedtree	0.01%	0	5
+2	Swamp_Hardwoods_Seedtree	0.01%	5	10
+2	Swamp_Hardwoods_Seedtree	0.01%	10	15
+2	Swamp_Hardwoods_Seedtree	0.01%	15	20
+2	Swamp_Hardwoods_Seedtree	0.01%	20	25
+2	Swamp_Hardwoods_Seedtree	0.01%	25	30
+2	Swamp_Hardwoods_Seedtree	0.01%	30	35
+2	Swamp_Hardwoods_Seedtree	0.01%	35	40
+2	Swamp_Hardwoods_Seedtree	0.01%	40	45
+2	Swamp_Hardwoods_Seedtree	0.01%	45	50
+2	Swamp_Hardwoods_Seedtree	0.01%	50	55
+2	Swamp_Hardwoods_Seedtree	0.01%	55	60
+2	Swamp_Hardwoods_Seedtree	0.01%	60	65
+2	Swamp_Hardwoods_Seedtree	0.01%	65	70
+2	Swamp_Hardwoods_Seedtree	0.01%	70	75
+2	Swamp_Hardwoods_Seedtree	0.01%	75	80
+2	Swamp_Hardwoods_Seedtree	0.01%	80	85
+2	Swamp_Hardwoods_Seedtree	0.01%	85	90
+2	Swamp_Hardwoods_Seedtree	0.01%	90	95
+2	Swamp_Hardwoods_Seedtree	0.01%	95	100
+2	Swamp_Hardwoods_Seedtree	0.01%	100	105
+2	Swamp_Hardwoods_Seedtree	0.01%	105	110
+2	Swamp_Hardwoods_Seedtree	0.01%	110	115
+2	Swamp_Hardwoods_Seedtree	0.01%	115	120
+2	Swamp_Hardwoods_Seedtree	0.01%	120	125
+2	Swamp_Hardwoods_Seedtree	0.01%	125	130
+2	Swamp_Hardwoods_Seedtree	0.01%	130	135
+2	Swamp_Hardwoods_Seedtree	0.01%	135	140
+2	Swamp_Hardwoods_Seedtree	0.01%	140	145
+2	Swamp_Hardwoods_Seedtree	0.01%	145	150
+3	Swamp_Hardwoods_Seedtree	0.01%	0	5
+3	Swamp_Hardwoods_Seedtree	0.01%	5	10
+3	Swamp_Hardwoods_Seedtree	0.01%	10	15
+3	Swamp_Hardwoods_Seedtree	0.01%	15	20
+3	Swamp_Hardwoods_Seedtree	0.01%	20	25
+3	Swamp_Hardwoods_Seedtree	0.01%	25	30
+3	Swamp_Hardwoods_Seedtree	0.01%	30	35
+3	Swamp_Hardwoods_Seedtree	0.01%	35	40
+3	Swamp_Hardwoods_Seedtree	0.01%	40	45
+3	Swamp_Hardwoods_Seedtree	0.01%	45	50
+3	Swamp_Hardwoods_Seedtree	0.01%	50	55
+3	Swamp_Hardwoods_Seedtree	0.01%	55	60
+3	Swamp_Hardwoods_Seedtree	0.01%	60	65
+3	Swamp_Hardwoods_Seedtree	0.01%	65	70
+3	Swamp_Hardwoods_Seedtree	0.01%	70	75
+3	Swamp_Hardwoods_Seedtree	0.01%	75	80
+3	Swamp_Hardwoods_Seedtree	0.01%	80	85
+3	Swamp_Hardwoods_Seedtree	0.01%	85	90
+3	Swamp_Hardwoods_Seedtree	0.01%	90	95
+3	Swamp_Hardwoods_Seedtree	0.01%	95	100
+3	Swamp_Hardwoods_Seedtree	0.01%	100	105
+3	Swamp_Hardwoods_Seedtree	0.01%	105	110
+3	Swamp_Hardwoods_Seedtree	0.01%	110	115
+3	Swamp_Hardwoods_Seedtree	0.01%	115	120
+3	Swamp_Hardwoods_Seedtree	0.01%	120	125
+3	Swamp_Hardwoods_Seedtree	0.01%	125	130
+3	Swamp_Hardwoods_Seedtree	0.01%	130	135
+3	Swamp_Hardwoods_Seedtree	0.01%	135	140
+3	Swamp_Hardwoods_Seedtree	0.01%	140	145
+3	Swamp_Hardwoods_Seedtree	0.01%	145	150
+4	Swamp_Hardwoods_Seedtree	0.04%	0	5
+4	Swamp_Hardwoods_Seedtree	0.04%	5	10
+4	Swamp_Hardwoods_Seedtree	0.04%	10	15
+4	Swamp_Hardwoods_Seedtree	0.04%	15	20
+4	Swamp_Hardwoods_Seedtree	0.04%	20	25
+4	Swamp_Hardwoods_Seedtree	0.04%	25	30
+4	Swamp_Hardwoods_Seedtree	0.04%	30	35
+4	Swamp_Hardwoods_Seedtree	0.04%	35	40
+4	Swamp_Hardwoods_Seedtree	0.04%	40	45
+4	Swamp_Hardwoods_Seedtree	0.04%	45	50
+4	Swamp_Hardwoods_Seedtree	0.04%	50	55
+4	Swamp_Hardwoods_Seedtree	0.04%	55	60
+4	Swamp_Hardwoods_Seedtree	0.04%	60	65
+4	Swamp_Hardwoods_Seedtree	0.04%	65	70
+4	Swamp_Hardwoods_Seedtree	0.04%	70	75
+4	Swamp_Hardwoods_Seedtree	0.04%	75	80
+4	Swamp_Hardwoods_Seedtree	0.04%	80	85
+4	Swamp_Hardwoods_Seedtree	0.04%	85	90
+4	Swamp_Hardwoods_Seedtree	0.04%	90	95
+4	Swamp_Hardwoods_Seedtree	0.04%	95	100
+4	Swamp_Hardwoods_Seedtree	0.04%	100	105
+4	Swamp_Hardwoods_Seedtree	0.04%	105	110
+4	Swamp_Hardwoods_Seedtree	0.04%	110	115
+4	Swamp_Hardwoods_Seedtree	0.04%	115	120
+4	Swamp_Hardwoods_Seedtree	0.04%	120	125
+4	Swamp_Hardwoods_Seedtree	0.04%	125	130
+4	Swamp_Hardwoods_Seedtree	0.04%	130	135
+4	Swamp_Hardwoods_Seedtree	0.04%	135	140
+4	Swamp_Hardwoods_Seedtree	0.04%	140	145
+4	Swamp_Hardwoods_Seedtree	0.04%	145	150
+1	Swamp_Hardwoods_Shelterwood	0.05%	0	5
+1	Swamp_Hardwoods_Shelterwood	0.05%	5	10
+1	Swamp_Hardwoods_Shelterwood	0.05%	10	15
+1	Swamp_Hardwoods_Shelterwood	0.05%	15	20
+1	Swamp_Hardwoods_Shelterwood	0.05%	20	25
+1	Swamp_Hardwoods_Shelterwood	0.05%	25	30
+1	Swamp_Hardwoods_Shelterwood	0.05%	30	35
+1	Swamp_Hardwoods_Shelterwood	0.05%	35	40
+1	Swamp_Hardwoods_Shelterwood	0.05%	40	45
+1	Swamp_Hardwoods_Shelterwood	0.05%	45	50
+1	Swamp_Hardwoods_Shelterwood	0.05%	50	55
+1	Swamp_Hardwoods_Shelterwood	0.05%	55	60
+1	Swamp_Hardwoods_Shelterwood	0.05%	60	65
+1	Swamp_Hardwoods_Shelterwood	0.05%	65	70
+1	Swamp_Hardwoods_Shelterwood	0.05%	70	75
+1	Swamp_Hardwoods_Shelterwood	0.05%	75	80
+1	Swamp_Hardwoods_Shelterwood	0.05%	80	85
+1	Swamp_Hardwoods_Shelterwood	0.05%	85	90
+1	Swamp_Hardwoods_Shelterwood	0.05%	90	95
+1	Swamp_Hardwoods_Shelterwood	0.05%	95	100
+1	Swamp_Hardwoods_Shelterwood	0.05%	100	105
+1	Swamp_Hardwoods_Shelterwood	0.05%	105	110
+1	Swamp_Hardwoods_Shelterwood	0.05%	110	115
+1	Swamp_Hardwoods_Shelterwood	0.05%	115	120
+1	Swamp_Hardwoods_Shelterwood	0.05%	120	125
+1	Swamp_Hardwoods_Shelterwood	0.05%	125	130
+1	Swamp_Hardwoods_Shelterwood	0.05%	130	135
+1	Swamp_Hardwoods_Shelterwood	0.05%	135	140
+1	Swamp_Hardwoods_Shelterwood	0.05%	140	145
+1	Swamp_Hardwoods_Shelterwood	0.05%	145	150
+2	Swamp_Hardwoods_Shelterwood	0.03%	0	5
+2	Swamp_Hardwoods_Shelterwood	0.03%	5	10
+2	Swamp_Hardwoods_Shelterwood	0.03%	10	15
+2	Swamp_Hardwoods_Shelterwood	0.03%	15	20
+2	Swamp_Hardwoods_Shelterwood	0.03%	20	25
+2	Swamp_Hardwoods_Shelterwood	0.03%	25	30
+2	Swamp_Hardwoods_Shelterwood	0.03%	30	35
+2	Swamp_Hardwoods_Shelterwood	0.03%	35	40
+2	Swamp_Hardwoods_Shelterwood	0.03%	40	45
+2	Swamp_Hardwoods_Shelterwood	0.03%	45	50
+2	Swamp_Hardwoods_Shelterwood	0.03%	50	55
+2	Swamp_Hardwoods_Shelterwood	0.03%	55	60
+2	Swamp_Hardwoods_Shelterwood	0.03%	60	65
+2	Swamp_Hardwoods_Shelterwood	0.03%	65	70
+2	Swamp_Hardwoods_Shelterwood	0.03%	70	75
+2	Swamp_Hardwoods_Shelterwood	0.03%	75	80
+2	Swamp_Hardwoods_Shelterwood	0.03%	80	85
+2	Swamp_Hardwoods_Shelterwood	0.03%	85	90
+2	Swamp_Hardwoods_Shelterwood	0.03%	90	95
+2	Swamp_Hardwoods_Shelterwood	0.03%	95	100
+2	Swamp_Hardwoods_Shelterwood	0.03%	100	105
+2	Swamp_Hardwoods_Shelterwood	0.03%	105	110
+2	Swamp_Hardwoods_Shelterwood	0.03%	110	115
+2	Swamp_Hardwoods_Shelterwood	0.03%	115	120
+2	Swamp_Hardwoods_Shelterwood	0.03%	120	125
+2	Swamp_Hardwoods_Shelterwood	0.03%	125	130
+2	Swamp_Hardwoods_Shelterwood	0.03%	130	135
+2	Swamp_Hardwoods_Shelterwood	0.03%	135	140
+2	Swamp_Hardwoods_Shelterwood	0.03%	140	145
+2	Swamp_Hardwoods_Shelterwood	0.03%	145	150
+3	Swamp_Hardwoods_Shelterwood	0.04%	0	5
+3	Swamp_Hardwoods_Shelterwood	0.04%	5	10
+3	Swamp_Hardwoods_Shelterwood	0.04%	10	15
+3	Swamp_Hardwoods_Shelterwood	0.04%	15	20
+3	Swamp_Hardwoods_Shelterwood	0.04%	20	25
+3	Swamp_Hardwoods_Shelterwood	0.04%	25	30
+3	Swamp_Hardwoods_Shelterwood	0.04%	30	35
+3	Swamp_Hardwoods_Shelterwood	0.04%	35	40
+3	Swamp_Hardwoods_Shelterwood	0.04%	40	45
+3	Swamp_Hardwoods_Shelterwood	0.04%	45	50
+3	Swamp_Hardwoods_Shelterwood	0.04%	50	55
+3	Swamp_Hardwoods_Shelterwood	0.04%	55	60
+3	Swamp_Hardwoods_Shelterwood	0.04%	60	65
+3	Swamp_Hardwoods_Shelterwood	0.04%	65	70
+3	Swamp_Hardwoods_Shelterwood	0.04%	70	75
+3	Swamp_Hardwoods_Shelterwood	0.04%	75	80
+3	Swamp_Hardwoods_Shelterwood	0.04%	80	85
+3	Swamp_Hardwoods_Shelterwood	0.04%	85	90
+3	Swamp_Hardwoods_Shelterwood	0.04%	90	95
+3	Swamp_Hardwoods_Shelterwood	0.04%	95	100
+3	Swamp_Hardwoods_Shelterwood	0.04%	100	105
+3	Swamp_Hardwoods_Shelterwood	0.04%	105	110
+3	Swamp_Hardwoods_Shelterwood	0.04%	110	115
+3	Swamp_Hardwoods_Shelterwood	0.04%	115	120
+3	Swamp_Hardwoods_Shelterwood	0.04%	120	125
+3	Swamp_Hardwoods_Shelterwood	0.04%	125	130
+3	Swamp_Hardwoods_Shelterwood	0.04%	130	135
+3	Swamp_Hardwoods_Shelterwood	0.04%	135	140
+3	Swamp_Hardwoods_Shelterwood	0.04%	140	145
+3	Swamp_Hardwoods_Shelterwood	0.04%	145	150
+4	Swamp_Hardwoods_Shelterwood	0.11%	0	5
+4	Swamp_Hardwoods_Shelterwood	0.11%	5	10
+4	Swamp_Hardwoods_Shelterwood	0.11%	10	15
+4	Swamp_Hardwoods_Shelterwood	0.11%	15	20
+4	Swamp_Hardwoods_Shelterwood	0.11%	20	25
+4	Swamp_Hardwoods_Shelterwood	0.11%	25	30
+4	Swamp_Hardwoods_Shelterwood	0.11%	30	35
+4	Swamp_Hardwoods_Shelterwood	0.11%	35	40
+4	Swamp_Hardwoods_Shelterwood	0.11%	40	45
+4	Swamp_Hardwoods_Shelterwood	0.11%	45	50
+4	Swamp_Hardwoods_Shelterwood	0.11%	50	55
+4	Swamp_Hardwoods_Shelterwood	0.11%	55	60
+4	Swamp_Hardwoods_Shelterwood	0.11%	60	65
+4	Swamp_Hardwoods_Shelterwood	0.11%	65	70
+4	Swamp_Hardwoods_Shelterwood	0.11%	70	75
+4	Swamp_Hardwoods_Shelterwood	0.11%	75	80
+4	Swamp_Hardwoods_Shelterwood	0.11%	80	85
+4	Swamp_Hardwoods_Shelterwood	0.11%	85	90
+4	Swamp_Hardwoods_Shelterwood	0.11%	90	95
+4	Swamp_Hardwoods_Shelterwood	0.11%	95	100
+4	Swamp_Hardwoods_Shelterwood	0.11%	100	105
+4	Swamp_Hardwoods_Shelterwood	0.11%	105	110
+4	Swamp_Hardwoods_Shelterwood	0.11%	110	115
+4	Swamp_Hardwoods_Shelterwood	0.11%	115	120
+4	Swamp_Hardwoods_Shelterwood	0.11%	120	125
+4	Swamp_Hardwoods_Shelterwood	0.11%	125	130
+4	Swamp_Hardwoods_Shelterwood	0.11%	130	135
+4	Swamp_Hardwoods_Shelterwood	0.11%	135	140
+4	Swamp_Hardwoods_Shelterwood	0.11%	140	145
+4	Swamp_Hardwoods_Shelterwood	0.11%	145	150
+1	Swamp_Hardwoods_Thinning	0.02%	0	150
+2	Swamp_Hardwoods_Thinning	0.01%	0	150
+3	Swamp_Hardwoods_Thinning	0.02%	0	150
+4	Swamp_Hardwoods_Thinning	0.05%	0	150
+2	Upland_Spruce_Fir_Clearcut	0.47%	0	150
+3	Upland_Spruce_Fir_Clearcut	0.84%	0	150
+4	Upland_Spruce_Fir_Clearcut	1.43%	0	150
+2	White_Pine_Clearcut	0.04%	0	150
+3	White_Pine_Clearcut	0.03%	0	150
+4	White_Pine_Clearcut	0.02%	0	150
+1	White_Pine_Patch	0.30%	0	150
+2	White_Pine_Patch	0.47%	0	150
+3	White_Pine_Patch	0.35%	0	150
+4	White_Pine_Patch	0.20%	0	150
+1	White_Pine_Seedtree	0.07%	0	5
+1	White_Pine_Seedtree	0.07%	5	10
+1	White_Pine_Seedtree	0.07%	10	15
+1	White_Pine_Seedtree	0.07%	15	20
+1	White_Pine_Seedtree	0.07%	20	25
+1	White_Pine_Seedtree	0.07%	25	30
+1	White_Pine_Seedtree	0.07%	30	35
+1	White_Pine_Seedtree	0.07%	35	40
+1	White_Pine_Seedtree	0.07%	40	45
+1	White_Pine_Seedtree	0.07%	45	50
+1	White_Pine_Seedtree	0.07%	50	55
+1	White_Pine_Seedtree	0.07%	55	60
+1	White_Pine_Seedtree	0.07%	60	65
+1	White_Pine_Seedtree	0.07%	65	70
+1	White_Pine_Seedtree	0.07%	70	75
+1	White_Pine_Seedtree	0.07%	75	80
+1	White_Pine_Seedtree	0.07%	80	85
+1	White_Pine_Seedtree	0.07%	85	90
+1	White_Pine_Seedtree	0.07%	90	95
+1	White_Pine_Seedtree	0.07%	95	100
+1	White_Pine_Seedtree	0.07%	100	105
+1	White_Pine_Seedtree	0.07%	105	110
+1	White_Pine_Seedtree	0.07%	110	115
+1	White_Pine_Seedtree	0.07%	115	120
+1	White_Pine_Seedtree	0.07%	120	125
+1	White_Pine_Seedtree	0.07%	125	130
+1	White_Pine_Seedtree	0.07%	130	135
+1	White_Pine_Seedtree	0.07%	135	140
+1	White_Pine_Seedtree	0.07%	140	145
+1	White_Pine_Seedtree	0.07%	145	150
+2	White_Pine_Seedtree	0.11%	0	5
+2	White_Pine_Seedtree	0.11%	5	10
+2	White_Pine_Seedtree	0.11%	10	15
+2	White_Pine_Seedtree	0.11%	15	20
+2	White_Pine_Seedtree	0.11%	20	25
+2	White_Pine_Seedtree	0.11%	25	30
+2	White_Pine_Seedtree	0.11%	30	35
+2	White_Pine_Seedtree	0.11%	35	40
+2	White_Pine_Seedtree	0.11%	40	45
+2	White_Pine_Seedtree	0.11%	45	50
+2	White_Pine_Seedtree	0.11%	50	55
+2	White_Pine_Seedtree	0.11%	55	60
+2	White_Pine_Seedtree	0.11%	60	65
+2	White_Pine_Seedtree	0.11%	65	70
+2	White_Pine_Seedtree	0.11%	70	75
+2	White_Pine_Seedtree	0.11%	75	80
+2	White_Pine_Seedtree	0.11%	80	85
+2	White_Pine_Seedtree	0.11%	85	90
+2	White_Pine_Seedtree	0.11%	90	95
+2	White_Pine_Seedtree	0.11%	95	100
+2	White_Pine_Seedtree	0.11%	100	105
+2	White_Pine_Seedtree	0.11%	105	110
+2	White_Pine_Seedtree	0.11%	110	115
+2	White_Pine_Seedtree	0.11%	115	120
+2	White_Pine_Seedtree	0.11%	120	125
+2	White_Pine_Seedtree	0.11%	125	130
+2	White_Pine_Seedtree	0.11%	130	135
+2	White_Pine_Seedtree	0.11%	135	140
+2	White_Pine_Seedtree	0.11%	140	145
+2	White_Pine_Seedtree	0.11%	145	150
+3	White_Pine_Seedtree	0.08%	0	5
+3	White_Pine_Seedtree	0.08%	5	10
+3	White_Pine_Seedtree	0.08%	10	15
+3	White_Pine_Seedtree	0.08%	15	20
+3	White_Pine_Seedtree	0.08%	20	25
+3	White_Pine_Seedtree	0.08%	25	30
+3	White_Pine_Seedtree	0.08%	30	35
+3	White_Pine_Seedtree	0.08%	35	40
+3	White_Pine_Seedtree	0.08%	40	45
+3	White_Pine_Seedtree	0.08%	45	50
+3	White_Pine_Seedtree	0.08%	50	55
+3	White_Pine_Seedtree	0.08%	55	60
+3	White_Pine_Seedtree	0.08%	60	65
+3	White_Pine_Seedtree	0.08%	65	70
+3	White_Pine_Seedtree	0.08%	70	75
+3	White_Pine_Seedtree	0.08%	75	80
+3	White_Pine_Seedtree	0.08%	80	85
+3	White_Pine_Seedtree	0.08%	85	90
+3	White_Pine_Seedtree	0.08%	90	95
+3	White_Pine_Seedtree	0.08%	95	100
+3	White_Pine_Seedtree	0.08%	100	105
+3	White_Pine_Seedtree	0.08%	105	110
+3	White_Pine_Seedtree	0.08%	110	115
+3	White_Pine_Seedtree	0.08%	115	120
+3	White_Pine_Seedtree	0.08%	120	125
+3	White_Pine_Seedtree	0.08%	125	130
+3	White_Pine_Seedtree	0.08%	130	135
+3	White_Pine_Seedtree	0.08%	135	140
+3	White_Pine_Seedtree	0.08%	140	145
+3	White_Pine_Seedtree	0.08%	145	150
+4	White_Pine_Seedtree	0.05%	0	5
+4	White_Pine_Seedtree	0.05%	5	10
+4	White_Pine_Seedtree	0.05%	10	15
+4	White_Pine_Seedtree	0.05%	15	20
+4	White_Pine_Seedtree	0.05%	20	25
+4	White_Pine_Seedtree	0.05%	25	30
+4	White_Pine_Seedtree	0.05%	30	35
+4	White_Pine_Seedtree	0.05%	35	40
+4	White_Pine_Seedtree	0.05%	40	45
+4	White_Pine_Seedtree	0.05%	45	50
+4	White_Pine_Seedtree	0.05%	50	55
+4	White_Pine_Seedtree	0.05%	55	60
+4	White_Pine_Seedtree	0.05%	60	65
+4	White_Pine_Seedtree	0.05%	65	70
+4	White_Pine_Seedtree	0.05%	70	75
+4	White_Pine_Seedtree	0.05%	75	80
+4	White_Pine_Seedtree	0.05%	80	85
+4	White_Pine_Seedtree	0.05%	85	90
+4	White_Pine_Seedtree	0.05%	90	95
+4	White_Pine_Seedtree	0.05%	95	100
+4	White_Pine_Seedtree	0.05%	100	105
+4	White_Pine_Seedtree	0.05%	105	110
+4	White_Pine_Seedtree	0.05%	110	115
+4	White_Pine_Seedtree	0.05%	115	120
+4	White_Pine_Seedtree	0.05%	120	125
+4	White_Pine_Seedtree	0.05%	125	130
+4	White_Pine_Seedtree	0.05%	130	135
+4	White_Pine_Seedtree	0.05%	135	140
+4	White_Pine_Seedtree	0.05%	140	145
+4	White_Pine_Seedtree	0.05%	145	150
+1	White_Pine_Shelterwood	0.12%	0	5
+1	White_Pine_Shelterwood	0.12%	5	10
+1	White_Pine_Shelterwood	0.12%	10	15
+1	White_Pine_Shelterwood	0.12%	15	20
+1	White_Pine_Shelterwood	0.12%	20	25
+1	White_Pine_Shelterwood	0.12%	25	30
+1	White_Pine_Shelterwood	0.12%	30	35
+1	White_Pine_Shelterwood	0.12%	35	40
+1	White_Pine_Shelterwood	0.12%	40	45
+1	White_Pine_Shelterwood	0.12%	45	50
+1	White_Pine_Shelterwood	0.12%	50	55
+1	White_Pine_Shelterwood	0.12%	55	60
+1	White_Pine_Shelterwood	0.12%	60	65
+1	White_Pine_Shelterwood	0.12%	65	70
+1	White_Pine_Shelterwood	0.12%	70	75
+1	White_Pine_Shelterwood	0.12%	75	80
+1	White_Pine_Shelterwood	0.12%	80	85
+1	White_Pine_Shelterwood	0.12%	85	90
+1	White_Pine_Shelterwood	0.12%	90	95
+1	White_Pine_Shelterwood	0.12%	95	100
+1	White_Pine_Shelterwood	0.12%	100	105
+1	White_Pine_Shelterwood	0.12%	105	110
+1	White_Pine_Shelterwood	0.12%	110	115
+1	White_Pine_Shelterwood	0.12%	115	120
+1	White_Pine_Shelterwood	0.12%	120	125
+1	White_Pine_Shelterwood	0.12%	125	130
+1	White_Pine_Shelterwood	0.12%	130	135
+1	White_Pine_Shelterwood	0.12%	135	140
+1	White_Pine_Shelterwood	0.12%	140	145
+1	White_Pine_Shelterwood	0.12%	145	150
+2	White_Pine_Shelterwood	0.19%	0	5
+2	White_Pine_Shelterwood	0.19%	5	10
+2	White_Pine_Shelterwood	0.19%	10	15
+2	White_Pine_Shelterwood	0.19%	15	20
+2	White_Pine_Shelterwood	0.19%	20	25
+2	White_Pine_Shelterwood	0.19%	25	30
+2	White_Pine_Shelterwood	0.19%	30	35
+2	White_Pine_Shelterwood	0.19%	35	40
+2	White_Pine_Shelterwood	0.19%	40	45
+2	White_Pine_Shelterwood	0.19%	45	50
+2	White_Pine_Shelterwood	0.19%	50	55
+2	White_Pine_Shelterwood	0.19%	55	60
+2	White_Pine_Shelterwood	0.19%	60	65
+2	White_Pine_Shelterwood	0.19%	65	70
+2	White_Pine_Shelterwood	0.19%	70	75
+2	White_Pine_Shelterwood	0.19%	75	80
+2	White_Pine_Shelterwood	0.19%	80	85
+2	White_Pine_Shelterwood	0.19%	85	90
+2	White_Pine_Shelterwood	0.19%	90	95
+2	White_Pine_Shelterwood	0.19%	95	100
+2	White_Pine_Shelterwood	0.19%	100	105
+2	White_Pine_Shelterwood	0.19%	105	110
+2	White_Pine_Shelterwood	0.19%	110	115
+2	White_Pine_Shelterwood	0.19%	115	120
+2	White_Pine_Shelterwood	0.19%	120	125
+2	White_Pine_Shelterwood	0.19%	125	130
+2	White_Pine_Shelterwood	0.19%	130	135
+2	White_Pine_Shelterwood	0.19%	135	140
+2	White_Pine_Shelterwood	0.19%	140	145
+2	White_Pine_Shelterwood	0.19%	145	150
+3	White_Pine_Shelterwood	0.14%	0	5
+3	White_Pine_Shelterwood	0.14%	5	10
+3	White_Pine_Shelterwood	0.14%	10	15
+3	White_Pine_Shelterwood	0.14%	15	20
+3	White_Pine_Shelterwood	0.14%	20	25
+3	White_Pine_Shelterwood	0.14%	25	30
+3	White_Pine_Shelterwood	0.14%	30	35
+3	White_Pine_Shelterwood	0.14%	35	40
+3	White_Pine_Shelterwood	0.14%	40	45
+3	White_Pine_Shelterwood	0.14%	45	50
+3	White_Pine_Shelterwood	0.14%	50	55
+3	White_Pine_Shelterwood	0.14%	55	60
+3	White_Pine_Shelterwood	0.14%	60	65
+3	White_Pine_Shelterwood	0.14%	65	70
+3	White_Pine_Shelterwood	0.14%	70	75
+3	White_Pine_Shelterwood	0.14%	75	80
+3	White_Pine_Shelterwood	0.14%	80	85
+3	White_Pine_Shelterwood	0.14%	85	90
+3	White_Pine_Shelterwood	0.14%	90	95
+3	White_Pine_Shelterwood	0.14%	95	100
+3	White_Pine_Shelterwood	0.14%	100	105
+3	White_Pine_Shelterwood	0.14%	105	110
+3	White_Pine_Shelterwood	0.14%	110	115
+3	White_Pine_Shelterwood	0.14%	115	120
+3	White_Pine_Shelterwood	0.14%	120	125
+3	White_Pine_Shelterwood	0.14%	125	130
+3	White_Pine_Shelterwood	0.14%	130	135
+3	White_Pine_Shelterwood	0.14%	135	140
+3	White_Pine_Shelterwood	0.14%	140	145
+3	White_Pine_Shelterwood	0.14%	145	150
+4	White_Pine_Shelterwood	0.08%	0	5
+4	White_Pine_Shelterwood	0.08%	5	10
+4	White_Pine_Shelterwood	0.08%	10	15
+4	White_Pine_Shelterwood	0.08%	15	20
+4	White_Pine_Shelterwood	0.08%	20	25
+4	White_Pine_Shelterwood	0.08%	25	30
+4	White_Pine_Shelterwood	0.08%	30	35
+4	White_Pine_Shelterwood	0.08%	35	40
+4	White_Pine_Shelterwood	0.08%	40	45
+4	White_Pine_Shelterwood	0.08%	45	50
+4	White_Pine_Shelterwood	0.08%	50	55
+4	White_Pine_Shelterwood	0.08%	55	60
+4	White_Pine_Shelterwood	0.08%	60	65
+4	White_Pine_Shelterwood	0.08%	65	70
+4	White_Pine_Shelterwood	0.08%	70	75
+4	White_Pine_Shelterwood	0.08%	75	80
+4	White_Pine_Shelterwood	0.08%	80	85
+4	White_Pine_Shelterwood	0.08%	85	90
+4	White_Pine_Shelterwood	0.08%	90	95
+4	White_Pine_Shelterwood	0.08%	95	100
+4	White_Pine_Shelterwood	0.08%	100	105
+4	White_Pine_Shelterwood	0.08%	105	110
+4	White_Pine_Shelterwood	0.08%	110	115
+4	White_Pine_Shelterwood	0.08%	115	120
+4	White_Pine_Shelterwood	0.08%	120	125
+4	White_Pine_Shelterwood	0.08%	125	130
+4	White_Pine_Shelterwood	0.08%	130	135
+4	White_Pine_Shelterwood	0.08%	135	140
+4	White_Pine_Shelterwood	0.08%	140	145
+4	White_Pine_Shelterwood	0.08%	145	150
+1	White_Pine_Thinning	0.31%	0	150
+2	White_Pine_Thinning	0.48%	0	150
+3	White_Pine_Thinning	0.36%	0	150
+4	White_Pine_Thinning	0.20%	0	150
+
+
+
+PrescriptionMaps  harvest/prescripts-{timestep}.img
+BiomassMaps         harvest/biomass-removed-{timestep}.img
+EventLog	harvest/event-log.csv
+SummaryLog	harvest/summary-log.csv
