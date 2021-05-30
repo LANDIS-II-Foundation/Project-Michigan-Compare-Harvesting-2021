@@ -7,10 +7,10 @@
 
    GoalAttributes
 >> ---------	        ----    --------                    	-----------------               --------------     	----------
->> Agent	        Goal    Goal                        	Reference                       Change focal      	 Is        
->> archetype            name    tendency                    	variable			value on prior     	cumulative
+>> Agent	        Goal    Goal                        	Reference                       Change focal      	 Is       	Focal value 
+>> archetype            name    tendency                    	variable			value on prior     	cumulative	Reference variable
 >> ---------	        ----    --------                    	-----------------               --------------     	----------
-   ForestManager	G1	EqualToOrAboveFocalValue	ManageAreaMaturityPercent	no			yes        
+   ForestManager	G1	EqualToOrAboveFocalValue	ManageAreaMaturityPercent	no			yes        	-
 
    MentalModelAttributes
 >> ------------------------------------------------------------------------------------------------------------------------------------

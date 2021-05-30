@@ -20,4 +20,4 @@
 >> Agent     Management
 >>           area 
 >> -----     ----------
-   FM1       2
+   FM1       2		RandomWalk	2

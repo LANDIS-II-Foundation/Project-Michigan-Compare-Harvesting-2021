@@ -1,0 +1,134 @@
+  Loading DecisionOptionAttributes from input_SOSIEL_SHE_DecisionOptionAttributes.csv
+  Loading DecisionOptionAntecedentAttributes from input_SOSIEL_SHE_DecisionOptionAntecedentAttributes.csv
+  Loading AgentGoalAttributes from input_SOSIEL_SHE_AgentGoalAttributes.csv
+  Loading AgentVariables from input_SOSIEL_SHE_AgentVariables.csv
+  Loading AgentDecisionOptionAttributes from input_SOSIEL_SHE_AgentDecisionOptionAttributes.csv
+  SosielHarvestAlgorithm: Initializing agents...
+  SosielHarvestAlgorithm: Initializing probabilities...
+SHE: ***** Executing mode #2 *****
+	Run Sosiel with parameters:
+	Area:2
+		Biomass:            31,847,694
+		Harvested:                   0
+		MaturityPercent:          0.00
+  SosielHarvestAlgorithm: Initializing first iteration...
+SHE: ***** Finished executing mode #2 *****
+SHE: ***** Executing mode #2 *****
+	Run Sosiel with parameters:
+	Area:2
+		Biomass:            36,750,372
+		Harvested:           3,981,112
+		MaturityPercent:          0.00
+SHE: ***** Finished executing mode #2 *****
+SHE: ***** Executing mode #2 *****
+	Run Sosiel with parameters:
+	Area:2
+		Biomass:            41,083,376
+		Harvested:           4,097,997
+		MaturityPercent:          0.00
+SHE: ***** Finished executing mode #2 *****
+SHE: ***** Executing mode #2 *****
+	Run Sosiel with parameters:
+	Area:2
+		Biomass:            43,482,542
+		Harvested:           4,520,178
+		MaturityPercent:          0.00
+SHE: ***** Finished executing mode #2 *****
+SHE: ***** Executing mode #2 *****
+	Run Sosiel with parameters:
+	Area:2
+		Biomass:            44,696,154
+		Harvested:           4,686,120
+		MaturityPercent:          0.00
+SHE: ***** Finished executing mode #2 *****
+SHE: ***** Executing mode #2 *****
+	Run Sosiel with parameters:
+	Area:2
+		Biomass:            46,865,838
+		Harvested:           4,869,809
+		MaturityPercent:          0.00
+SHE: ***** Finished executing mode #2 *****
+SHE: ***** Executing mode #2 *****
+	Run Sosiel with parameters:
+	Area:2
+		Biomass:            49,873,630
+		Harvested:           4,940,869
+		MaturityPercent:          0.00
+SHE: ***** Finished executing mode #2 *****
+SHE: ***** Executing mode #2 *****
+	Run Sosiel with parameters:
+	Area:2
+		Biomass:            52,703,048
+		Harvested:           5,046,024
+		MaturityPercent:          0.00
+SHE: ***** Finished executing mode #2 *****
+SHE: ***** Executing mode #2 *****
+	Run Sosiel with parameters:
+	Area:2
+		Biomass:            54,750,393
+		Harvested:           5,390,590
+		MaturityPercent:          0.00
+SHE: ***** Finished executing mode #2 *****
+SHE: ***** Executing mode #2 *****
+	Run Sosiel with parameters:
+	Area:2
+		Biomass:            56,860,776
+		Harvested:           5,619,740
+		MaturityPercent:          0.00
+SHE: ***** Finished executing mode #2 *****
+SHE: ***** Executing mode #2 *****
+	Run Sosiel with parameters:
+	Area:2
+		Biomass:            59,180,136
+		Harvested:           5,974,790
+		MaturityPercent:          0.00
+SHE: ***** Finished executing mode #2 *****
+SHE: ***** Executing mode #2 *****
+	Run Sosiel with parameters:
+	Area:2
+		Biomass:            61,078,864
+		Harvested:           6,180,524
+		MaturityPercent:          0.00
+SHE: ***** Finished executing mode #2 *****
+SHE: ***** Executing mode #2 *****
+	Run Sosiel with parameters:
+	Area:2
+		Biomass:            64,735,599
+		Harvested:           6,485,333
+		MaturityPercent:          0.00
+SHE: ***** Finished executing mode #2 *****
+SHE: ***** Executing mode #2 *****
+	Run Sosiel with parameters:
+	Area:2
+		Biomass:            66,010,408
+		Harvested:           6,681,778
+		MaturityPercent:          0.00
+SHE: ***** Finished executing mode #2 *****
+SHE: ***** Executing mode #2 *****
+	Run Sosiel with parameters:
+	Area:2
+		Biomass:            66,716,460
+		Harvested:           6,781,736
+		MaturityPercent:          0.00
+SHE: ***** Finished executing mode #2 *****
+SHE: ***** Executing mode #2 *****
+	Run Sosiel with parameters:
+	Area:2
+		Biomass:            67,250,605
+		Harvested:           6,769,654
+		MaturityPercent:          0.00
+SHE: ***** Finished executing mode #2 *****
+SHE: ***** Executing mode #2 *****
+	Run Sosiel with parameters:
+	Area:2
+		Biomass:            68,151,552
+		Harvested:           6,918,338
+		MaturityPercent:          0.00
+SHE: ***** Finished executing mode #2 *****
+SHE: ***** Executing mode #2 *****
+	Run Sosiel with parameters:
+	Area:2
+		Biomass:            68,891,460
+		Harvested:           7,053,053
+		MaturityPercent:          0.00
+SHE: ***** Finished executing mode #2 *****
