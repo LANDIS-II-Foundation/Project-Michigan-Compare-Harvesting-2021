@@ -1,0 +1,56 @@
+LandisData  "Output Biomass Reclass"
+Timestep  10
+>>           Reclass
+>> Species   Coefficient
+>> --------  -----------
+ReclassMaps
+>> Map Name    Forest Type    Species
+>> --------    -------------  -------
+
+reclass1 ->	1northernhard	acersacc prunsero querrubr tiliamer -popugran -poputrem
+			2white_pine		pinustro 
+			3aspen_birch  	poputrem popugran  betupapy popubals -acersacc -abiebals
+			4red_jack_pine	pinubank pinuresi
+			5oak 			querrubr queralba quervelu querelli quermacr castdent carycord caryovat quercocc -picemari -abiebals -piceglau
+			6spuce_fir		picemari abiebals piceglau thujocci -acersacc -pinubank
+			
+
+>>Harvest prescription groups
+>>reclass2 ->			1Aspen	popubals popugran poputrem
+>>					2paper_birch betupapy 	
+>>					3cedar thujocci
+>>					4swamp_hardwoods betualle fraxnigr fraxpenn fraxamer -querrubr -quervelu
+>>					5upland_spruce_fir picemari abiebals piceglau -acersacc
+>>					6hemlock tsugcana
+>>					7jack_pine pinubank 
+>>					8northern_hardwood acersacc prunsero querrubr tiliamer -popugran -poputrem
+>>					9oak queralba querelli quermacr querrubr quervelu -picemari -abiebals -piceglau
+>>					10red_pine pinuresi 
+>>					11black_spruce_swamp  picemari
+>>					12white_pine pinustro
+	
+>>Stephen's groups
+>>reclass2 ->	1northernhard	acersacc acerrubr fagugran tiliamer tsugcana fraxamer prunsero betualle fraxnigr
+>>			2aspen_birch_poplar	poputrem popugran  betupapy popubals
+>>			3upland_spruce abiebals piceglau acerrubr tsugcana pinustro
+>>			4lowland_conifer thujocci picemari abiebals piceglau pinustro betupapy
+>>			5jack_pine	pinubank pinuresi 
+>>			6red_white_pine pinustro pinuresi pinubank popugran querrubr 
+>>			7oak_association querrubr queralba quervelu popugran querelli
+>>			8lowland_riparian	acerrubr thujocci fraxnigr fraxpenn betupapy tsugcana betualle ulmuamer tiliamer fraxamer popubals poputrem abiebals
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+MapFileNames   output/reclass/{reclass-map-name}-{timestep}.img
+

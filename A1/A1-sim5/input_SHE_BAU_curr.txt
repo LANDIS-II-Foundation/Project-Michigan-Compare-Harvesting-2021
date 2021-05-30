@@ -1,0 +1,23 @@
+>> Name: input_SHE_BAU_curr_cli
+>> Description: The SOSIEL Harvest Extension's main input file.
+>> Data: By G. Sotnik, last updated on Sep. 7th, 2020.
+
+   LandisData  "SOSIEL Harvest"
+
+   Mode	       2
+
+   Timestep    5
+
+>> ---------            ---------
+>> Extension            Extension
+>> name                 file
+>> ---------            ---------
+   "SOSIEL Harvest"	input_SOSIEL_SHE.txt
+   "Biomass Harvest"	input_BHE_SHE_BAU_curr.txt << MI_BAU_harvest_2013.txt
+
+   AgentToManagementArea
+>> -----     ----------
+>> Agent     Management
+>>           area 
+>> -----     ----------
+   FM1       2

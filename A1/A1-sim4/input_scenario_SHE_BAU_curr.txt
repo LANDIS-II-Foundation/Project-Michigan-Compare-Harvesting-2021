@@ -1,0 +1,35 @@
+>> Name: input_scenario_SHE_BAU_curr.txt (corresponds to scenario_MI_A_BAU_harv-1curr-cli.txt)
+>> Description: LANDIS-II's scenario file that is read by the BatchFile.
+>> First author: Matthew Duveneck in 2014.
+>> Second author: Garry Sotnik. Included the SOSIEL Harvest extension (SHE).
+>> Last updated: Sep. 18, 2020, 10:52 AM EET, by G. Sotnik.
+
+   LandisData	Scenario
+
+   Duration	150
+
+   Species                     MI_species_6_14_2013.txt
+   Ecoregions                  MI_Ecoregions.txt
+   EcoregionsMap               MI_eco_5_1_2013A.img
+   CellLength                  142 << meters
+
+>> Succession Extension        Initialization File
+>> --------------------	       -------------------
+   "Biomass Succession"        MI_biomass-succession-current.txt
+
+>> Disturbance Extensions      Initialization File
+>> ----------------------      -------------------
+   "Base Wind"		       wind_patches.txt
+>> "Biomass Harvest"           input_BHE_SHE_BAU_curr.txt << MI_BAU_harvest_2013.txt
+   "SOSIEL Harvest"            input_SHE_BAU_curr.txt
+
+>> DisturbancesRandomOrder  yes  << optional parameter, default = no
+
+>> Other Extensions            Initialization File
+>> ----------------            -------------------
+   "Output Biomass"    	       output-biomass.txt
+   "Output Biomass Reclass"    MI_reclass-biomass.output_csp.txt
+   "Output Cohort Statistics"  cohort-stats.output.txt
+
+   RandomNumberSeed            4,357  << optional parameter; default = the seed is
+                                      << randomly generated using the current time
