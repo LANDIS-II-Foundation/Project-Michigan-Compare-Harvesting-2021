@@ -1,6 +1,4 @@
-
-
-# Ignores Jupyter Notebook's checkpoints.
+# Jupyter Notebook's checkpoints.
 .ipynb_checkpoints
 
 # Logs
@@ -21,3 +19,5 @@ harvest/
 bda/
 output_*.json
 output_SOSIEL_Harvest*
+output/
+spp-age-stats/
