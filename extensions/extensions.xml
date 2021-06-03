@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ExtensionDataset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Extensions>
+    <Extension Name="Output Biomass Reclass" Version="3.0">
+      <Type>output</Type>
+      <Assembly>Landis.Extension.Output.BiomassReclass-v3</Assembly>
+      <Class>Landis.Extension.Output.BiomassReclass.PlugIn</Class>
+      <Description>Output forest reclassification maps using biomass</Description>
+    </Extension>
+    <Extension Name="SOSIEL Human" Version="2.0">
+      <Type>disturbance:harvest</Type>
+      <Assembly>Landis.Extension.SOSIELHuman-v2</Assembly>
+      <Class>Landis.Extension.SOSIELHuman.PlugIn</Class>
+      <Description>SOSIEL Harvesting for biomass cohorts</Description>
+    </Extension>
+    <Extension Name="Biomass Harvest" Version="4.3">
+      <Type>disturbance:harvest</Type>
+      <Assembly>Landis.Extension.BiomassHarvest-v4</Assembly>
+      <Class>Landis.Extension.BiomassHarvest.PlugIn</Class>
+      <Description>Harvesting for biomass cohorts</Description>
+    </Extension>
+    <Extension Name="Base Harvest" Version="5.1">
+      <Type>disturbance:harvest</Type>
+      <Assembly>Landis.Extension.BaseHarvest-v5</Assembly>
+      <Class>Landis.Extension.BaseHarvest.PlugIn</Class>
+      <Description>Generic Harvesting for all cohorts</Description>
+    </Extension>
+    <Extension Name="Output Biomass" Version="3.0">
+      <Type>output</Type>
+      <Assembly>Landis.Extension.Output.Biomass-v3</Assembly>
+      <Class>Landis.Extension.Output.Biomass.PlugIn</Class>
+      <Description>Output biomass maps</Description>
+    </Extension>
+    <Extension Name="Dynamic Fuel System" Version="3.0">
+      <Type>disturbance:fuel</Type>
+      <Assembly>Landis.Extension.DynamicFuels-v3</Assembly>
+      <Class>Landis.Extension.DynamicFuels.PlugIn</Class>
+      <Description>Dynamic Fuel assignment extension</Description>
+    </Extension>
+    <Extension Name="Dynamic Fire System" Version="3.0">
+      <Type>disturbance:fire</Type>
+      <Assembly>Landis.Extension.DynamicFire-v3</Assembly>
+      <Class>Landis.Extension.DynamicFire.PlugIn</Class>
+      <Description>Dynamic Fire System</Description>
+    </Extension>
+    <Extension Name="Output Age Reclassification" Version="3.0">
+      <Type>output</Type>
+      <Assembly>Landis.Extension.Output.AgeReclass-v3</Assembly>
+      <Class>Landis.Extension.Output.AgeReclass.PlugIn</Class>
+      <Description>Output forest reclassification maps</Description>
+    </Extension>
+    <Extension Name="Output Biomass-by-Age" Version="3.0">
+      <Type>output</Type>
+      <Assembly>Landis.Extension.Output.BiomassByAge-v3</Assembly>
+      <Class>Landis.Extension.Output.BiomassByAge.PlugIn</Class>
+      <Description>Output biomass by ageclass by species</Description>
+    </Extension>
+    <Extension Name="Biomass Succession" Version="5.2">
+      <Type>succession</Type>
+      <Assembly>Landis.Extension.Succession.Biomass-v5</Assembly>
+      <Class>Landis.Extension.Succession.Biomass.PlugIn</Class>
+      <Description>Succession with biomass cohorts</Description>
+    </Extension>
+    <Extension Name="SOSIEL Harvest" Version="1.1">
+      <Type>disturbance:harvest</Type>
+      <Assembly>Landis.Extension.SOSIELHarvest-v1</Assembly>
+      <Class>Landis.Extension.SOSIELHarvest.PlugIn</Class>
+      <Description>SOSIEL Harvesting for biomass cohorts</Description>
+    </Extension>
+    <Extension Name="Base Wind" Version="3.0">
+      <Type>disturbance:wind</Type>
+      <Assembly>Landis.Extension.BaseWind-v3</Assembly>
+      <Class>Landis.Extension.BaseWind.PlugIn</Class>
+      <Description>Wind Disturbance</Description>
+    </Extension>
+    <Extension Name="Base Fire" Version="4.0">
+      <Type>disturbance:fire</Type>
+      <Assembly>Landis.Extension.BaseFire-v4</Assembly>
+      <Class>Landis.Extension.BaseFire.PlugIn</Class>
+      <Description>Fire Disturbance</Description>
+    </Extension>
+    <Extension Name="Output Cohort Statistics" Version="3.0">
+      <Type>output</Type>
+      <Assembly>Landis.Extension.Output.CohortStats-v3</Assembly>
+      <Class>Landis.Extension.Output.CohortStats.PlugIn</Class>
+      <Description>This extension will produce outputs of cohort statistics</Description>
+    </Extension>
+  </Extensions>
+</ExtensionDataset>
