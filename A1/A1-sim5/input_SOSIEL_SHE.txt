@@ -1,0 +1,89 @@
+>> Name: input_SOSIEL_SHE.txt
+>> Description: The SOSIEL Platform's main input file for parameterizing agents.
+>> Author: G. Sotnik.
+>> Last updated: Nov. 13, 2020, 11:40 AM EET.
+
+   CognitiveLevel	CL1
+
+   GoalAttributes
+>> ---------	        ----    --------                    	-----------------               --------------     	----------
+>> Agent	        Goal    Goal                        	Reference                       Change focal      	 Is        	Focal value
+>> archetype            name    tendency                    	variable			value on prior     	cumulative	reference variable
+>> ---------	        ----    --------                    	-----------------               --------------     	----------
+   ForestManager	G1	EqualToOrAboveFocalValue	ManageAreaMaturityPercent	no			yes        	-
+
+   MentalModelAttributes
+>> ------------------------------------------------------------------------------------------------------------------------------------
+>> Archetype		Mental		Modifiable	Maximum number	DO goal	relationship	Assosiated	Consequent	Consequent     		 
+>> name			(sub-)model			of DOs		(required if		with		value		value
+>> 									MM is modifiable)	goals		range		rounding 
+>> ------------------------------------------------------------------------------------------------------------------------------------
+   ForestManager	MM1-1		no		3		G1<->			G1		0.0001-100.00	4
+   ForestManager	MM2-1		no		3		G1<->			G1		0.0001-100.00	4
+   ForestManager	MM3-1		no		3		G1<->			G1		0.0001-100.00	4
+   ForestManager	MM4-1		no		3		G1<->			G1		0.0001-100.00	4
+   ForestManager	MM5-1		no		3		G1<->			G1		0.0001-100.00	4
+   ForestManager	MM6-1		no		3		G1<->			G1		0.0001-100.00	4
+   ForestManager	MM7-1		no		3		G1<->			G1		0.0001-100.00	4
+   ForestManager	MM8-1		no		3		G1<->			G1		0.0001-100.00	4
+   ForestManager	MM9-1		no		3		G1<->			G1		0.0001-100.00	4
+   ForestManager	MM10-1		no		3		G1<->			G1		0.0001-100.00	4
+   ForestManager	MM11-1		no		3		G1<->			G1		0.0001-100.00	4
+   ForestManager	MM12-1		no		3		G1<->			G1		0.0001-100.00	4
+   ForestManager	MM13-1		no		3		G1<->			G1		0.0001-100.00	4
+   ForestManager	MM14-1		no		3		G1<->			G1		0.0001-100.00	4
+   ForestManager	MM15-1		no		3		G1<->			G1		0.0001-100.00	4
+   ForestManager	MM16-1		no		3		G1<->			G1		0.0001-100.00	4
+   ForestManager	MM17-1		no		3		G1<->			G1		0.0001-100.00	4
+   ForestManager	MM18-1		no		3		G1<->			G1		0.0001-100.00	4
+   ForestManager	MM19-1		no		3		G1<->			G1		0.0001-100.00	4
+   ForestManager	MM20-1		no		3		G1<->			G1		0.0001-100.00	4
+   ForestManager	MM21-1		no		3		G1<->			G1		0.0001-100.00	4
+   ForestManager	MM22-1		no		3		G1<->			G1		0.0001-100.00	4
+   ForestManager	MM23-1		no		3		G1<->			G1		0.0001-100.00	4
+   ForestManager	MM24-1		no		3		G1<->			G1		0.0001-100.00	4
+   ForestManager	MM25-1		no		3		G1<->			G1		0.0001-100.00	4
+   ForestManager	MM26-1		no		3		G1<->			G1		0.0001-100.00	4
+   ForestManager	MM27-1		no		3		G1<->			G1		0.0001-100.00	4
+   ForestManager	MM28-1		no		3		G1<->			G1		0.0001-100.00	4
+   ForestManager	MM31-1		no		3		G1<->			G1		0.0001-100.00	4
+   ForestManager	MM32-1		no		3		G1<->			G1		0.0001-100.00	4
+   ForestManager	MM33-1		no		3		G1<->			G1		0.0001-100.00	4
+   ForestManager	MM34-1		no		3		G1<->			G1		0.0001-100.00	4
+   ForestManager	MM35-1		no		3		G1<->			G1		0.0001-100.00	4
+
+   DecisionOptionAttributes               input_SOSIEL_SHE_DecisionOptionAttributes.csv
+
+   DecisionOptionAntecedentAttributes     input_SOSIEL_SHE_DecisionOptionAntecedentAttributes.csv
+
+   AgentArchetypeAttributes
+>> ----------		---------	----------	----------
+>> Archetype		Archetype	Dataset         Goal importance
+>> name            	prefix		orientied	adjusting
+>> ----------       	----------    	----------      ----------   	  
+   ForestManager	FM		yes		yes
+
+>> 
+   AgentArchetypeVariables
+>> ---------         ---------            --------	--------		
+>> Archetype	     Variable	          Variable	Variable 			
+>> name     	     name	          type     	value		
+>> ---------         ---------	          --------      --------
+   ForestManager     ManageAreaBiomass    Integer       0
+
+   AgentGoalAttributes               input_SOSIEL_SHE_AgentGoalAttributes.csv
+
+   AgentVariables                    input_SOSIEL_SHE_AgentVariables.csv
+
+   AgentDecisionOptionAttributes     input_SOSIEL_SHE_AgentDecisionOptionAttributes.csv
+
+   DemographicAttributes             input_SOSIEL_SHE_DemographicAttributes.csv
+
+   ProbabilityAttributes
+>> ----------     --------     ----		                          ------------
+>> Variable       Variable     File 			                  Ignore first
+>> parameter      type	       name			                  line
+>> ----------     --------     ----			                  ------------
+   Birth          Integer      input_SOSIEL_SHE_Birth_probability.csv     yes
+   Death          Integer      input_SOSIEL_SHE_Death_probability.csv     yes
+   General        Integer      input_SOSIEL_SHE_General_probability.csv   yes

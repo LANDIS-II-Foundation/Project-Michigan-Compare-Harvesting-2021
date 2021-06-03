@@ -1,0 +1,8 @@
+LandisData  "Output Max Species Age"
+
+Timestep   10
+
+MapNames   max-spp-age/{species}-{timestep}.img
+
+Species    abiebals
+	   tiliamer

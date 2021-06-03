@@ -1,0 +1,23 @@
+# Jupyter Notebook's checkpoints.
+.ipynb_checkpoints
+
+# Logs
+*.log
+*log.csv
+*log.txt
+*-log-*.csv
+*-log-*.txt
+simulation-*.log
+
+# Generated data
+Metadata/
+biomass/
+wind/
+biomass-succession/
+1_bms_af_bl/
+harvest/
+bda/
+output_*.json
+output_SOSIEL_Harvest*
+output/
+spp-age-stats/

@@ -1,0 +1,43 @@
+>>MICHIGAN OUTPUT BIOMASS FILE.
+LandisData  "Output Biomass"
+
+Timestep  5
+
+MakeTable yes  << Optional parameter
+
+Species   abiebals
+acerrubr	
+acersacc	
+betualle	
+betupapy	
+carycord	
+caryovat 
+castdent
+fagugran	
+fraxamer	
+fraxnigr	
+fraxpenn  	
+piceglau	
+picemari  	
+pinubank	
+pinuresi	
+pinustro	
+pinusylv  	
+popubals	
+popugran  	
+poputrem  	
+prunsero	
+queralba
+quercocc	
+querelli 
+querfalc	
+quermacr	
+querrubr  	
+quervelu	
+thujocci	
+tiliamer  	
+ulmuamer	
+tsugcana	
+	
+
+MapNames  biomass/{species}-{timestep}.img
