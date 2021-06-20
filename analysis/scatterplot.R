@@ -8,7 +8,7 @@ setwd(dirname(getActiveDocumentContext()$path))
 getwd()
 
 # Create dummy data
-data.df <- read.csv(file = "A3_R3b.csv", header = TRUE, stringsAsFactors = FALSE)
+data.df <- read.csv(file = "A3_R3.csv", header = TRUE, stringsAsFactors = FALSE)
 data.df
 
 # linear trend + confidence interval
