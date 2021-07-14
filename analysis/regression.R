@@ -11,7 +11,7 @@ setwd(dirname(getActiveDocumentContext()$path))
 getwd()
 
 # Import data
-data.df <- read.csv(file = "A1-5.csv", header = TRUE, stringsAsFactors = FALSE)
+data.df <- read.csv(file = "test.csv", header = TRUE, stringsAsFactors = FALSE)
 data.df
 
 # Linear regression 
